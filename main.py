@@ -124,19 +124,22 @@ Updated 8/14/18 2:53 PM PST: This article has been updated to reflect the contri
 # In Pakistan, the financial implications of this practice are significant. The ECP estimates a cost of Rs20.7m associated with conducting by-elections in constituencies vacated by winning candidates. These expenses, borne by taxpayers, are hard to justify, especially in a country facing economic challenges.
 
 # Furthermore, the ability to contest from multiple constituencies creates an inherent imbalance in the poll competition. It favours those with ample resources, often sidelining capable candidates with limited financial means. This disparity goes against the very essence of a democratic system, which should ideally ensure equal opportunities for all aspirants, irrespective of their economic status. The matter also has a direct impact on voter sentiment."""
-content="""Established in 1941 by the Habib Family, HBL is Pakistan's oldest, largest and the first commercial bank. In 1951, it opened its first international branch in Colombo, Sri Lanka. In 1972, the bank moved its headquarters to the Habib Bank Plaza, which became the tallest building in South Asia at the time. The Government nationalised the bank in 1974 and privatised it in 2004; at that time, the Aga Khan Fund for Economic Development acquired a controlling share and management control.["""
+# content="""Established in 1941 by the Habib Family, HBL is Pakistan's oldest, Pakistan largest and the first commercial bank. In 1951, it opened its first international branch in Colombo, Sri Lanka. In 1972, the bank moved its headquarters to the Habib Bank Plaza, which became the tallest building in South Asia at the time. The Government nationalised the bank in 1974 and privatised it in 2004; at that time, the Aga Khan Fund for Economic Development acquired a controlling share and management control.["""
 # content1="""Quaid-e-Azam Mohammed Ali Jinnah, Pakistan's first Governor General, realised the importance of financial intermediation while he was campaigning for the creation of a separate homeland for the Muslims of the subcontinent. He persuaded the Habib family to establish a commercial bank that could serve the Muslim community. His initiative resulted in the creation of Habib Bank in 1941, with head office in Bombay (now Mumbai) and fixed capital of 25,000 rupees. The bank played an essential role in mobilising funds from the Muslim community to finance the All-India Muslim League's campaign to establish Pakistan. Habib Bank also played an important role in channeling relief funds to Muslims hurt in the communal riots and violence that preceded the departure of the British from British India and the subsequent partition."""
-test_str="""ISLAMABAD: The World Bank fears that following the upcoming elections, strong and organised vested interests may spur a number of potential reversals on critical policy reforms — committed to multilateral lenders — posing ‘high’ macroeconomic risks to Pakistan.
-The possible reversals include the rationalisation of gas and electricity subsidies, lower trade tariffs and better property tax realisation.
-The Pakistan Tehreek-i-Insaf (PTI) on Tuesday challenged the Election Commission of Pakistan’s declaration of its intra-party polls as unconstitutional and revocation of the ‘bat’ symbol in the Peshawar High Court, and urged the court to suspend the commission’s order forthwith.
-The petition has been accepted for hearing today.
-The development comes after the electoral watchdog last week voided, for the second time in under than a month, PTI’s internal elections in which Barrister Gohar Ali Khan was elected as the party’s new chairman.
-LAHORE: At last, Yasir Arafat will get the chance to be part of Pakistan’s coaching panel.
-The former all-rounder is set to be Pakistan’s coach for the upcoming five-match T20I series in New Zealand, Dawn has learnt, less than a year after he was in the fray to become the team’s bowling coach.
-Former Pakistan team director Mickey Arthur had wanted Yasir to train the team’s pacers but eventually South African pacer Morne Morkel was appoi­nted for the job.
-"""
+# test_str="""ISLAMABAD: The World Bank fears that following the upcoming elections, strong and organised vested interests may spur a number of potential reversals on critical policy reforms — committed to multilateral lenders — posing ‘high’ macroeconomic risks to Pakistan.
+# The possible reversals include the rationalisation of gas and electricity subsidies, lower trade tariffs and better property tax realisation."""
+hello_str="Lifetime disqualification: CJP Isa says SC seeking ‘clarity’ in run-up to elections"
+# dumy_str="ali this job is very importent,you have to go to lahore for this and find someone in xyz park"
+############### Modify this string index and fecth it #################
+# test_str_1="""Imagine having a conversation with a friend. It’s a normal conversation. You discuss careers, goals and aspirations. 
+# There is a little bit of gossip about your friend’s recent breakup and about two friends who may potentially be dating, 
+# and also about how another friend has lost a job. All is going pretty smoothly. """
+#test_str_1="SHAKESPEARE may have come up with a line for all times when he wrote “to be or not to be”, but in Pakistan we have found a dilemma just as important and worthy of much debate."
+# test_fail="The bank is on the river, and the bank approved my loan application."
 
 Miner = NewsMining()
-Miner.main(test_str)
+# with open("data.txt",'r') as file:
+#     content=file.read()
+Miner.main(hello_str)
 # Miner.main(content4)
 # Miner.main(content3)

@@ -1,0 +1,380 @@
+{
+  "nodes": [
+    {
+      "from": 64,
+      "label": "",
+      "to": 19,
+      "category": "keyword",
+      "distance": 0
+    },
+    {
+      "from": 62,
+      "label": "",
+      "to": 19,
+      "category": "keyword",
+      "distance": 0
+    },
+    {
+      "from": 60,
+      "label": "",
+      "to": 19,
+      "category": "keyword",
+      "distance": 0
+    },
+    {
+      "from": 68,
+      "label": "",
+      "to": 19,
+      "category": "keyword",
+      "distance": 0
+    },
+    {
+      "from": 66,
+      "label": "",
+      "to": 19,
+      "category": "keyword",
+      "distance": 0
+    },
+    {
+      "from": 72,
+      "label": "",
+      "to": 19,
+      "category": "keyword",
+      "distance": 0
+    },
+    {
+      "from": 70,
+      "label": "",
+      "to": 19,
+      "category": "keyword",
+      "distance": 0
+    },
+    {
+      "from": 58,
+      "label": "",
+      "to": 19,
+      "category": "keyword",
+      "distance": 0
+    },
+    {
+      "from": 74,
+      "label": "",
+      "to": 19,
+      "category": "keyword",
+      "distance": 0
+    },
+    {
+      "from": 18,
+      "label": "",
+      "to": 19,
+      "category": "keyword",
+      "distance": 0
+    },
+    {
+      "from": 62,
+      "label": "",
+      "to": 64,
+      "category": "other",
+      "distance": 0
+    },
+    {
+      "from": 66,
+      "label": "",
+      "to": 23,
+      "category": "other",
+      "distance": 0
+    },
+    {
+      "from": 24,
+      "label": "",
+      "to": 43,
+      "category": "frequency",
+      "distance": 0
+    },
+    {
+      "from": 58,
+      "label": "",
+      "to": 43,
+      "category": "frequency",
+      "distance": 0
+    },
+    {
+      "from": 60,
+      "label": "",
+      "to": 43,
+      "category": "frequency",
+      "distance": 0
+    },
+    {
+      "from": 62,
+      "label": "",
+      "to": 43,
+      "category": "frequency",
+      "distance": 0
+    },
+    {
+      "from": 64,
+      "label": "",
+      "to": 43,
+      "category": "frequency",
+      "distance": 0
+    },
+    {
+      "from": 66,
+      "label": "",
+      "to": 43,
+      "category": "frequency",
+      "distance": 0
+    },
+    {
+      "from": 68,
+      "label": "",
+      "to": 43,
+      "category": "frequency",
+      "distance": 0
+    },
+    {
+      "from": 70,
+      "label": "",
+      "to": 43,
+      "category": "frequency",
+      "distance": 0
+    },
+    {
+      "from": 72,
+      "label": "",
+      "to": 43,
+      "category": "frequency",
+      "distance": 0
+    },
+    {
+      "from": 74,
+      "label": "",
+      "to": 43,
+      "category": "frequency",
+      "distance": 0
+    },
+    {
+      "from": 50,
+      "label": "",
+      "to": 45,
+      "category": "other",
+      "distance": 0
+    },
+    {
+      "from": 66,
+      "label": "",
+      "to": 47,
+      "category": "other",
+      "distance": 0
+    },
+    {
+      "from": 66,
+      "label": "",
+      "to": 50,
+      "category": "other",
+      "distance": 0
+    },
+    {
+      "from": 50,
+      "label": "",
+      "to": 66,
+      "category": "other",
+      "distance": 0
+    },
+    {
+      "from": 62,
+      "label": "",
+      "to": 75,
+      "category": "related",
+      "distance": 0
+    },
+    {
+      "from": 64,
+      "label": "",
+      "to": 75,
+      "category": "related",
+      "distance": 0
+    },
+    {
+      "from": 66,
+      "label": "",
+      "to": 75,
+      "category": "related",
+      "distance": 0
+    },
+    {
+      "from": 58,
+      "label": "",
+      "to": 75,
+      "category": "frequency",
+      "distance": 0
+    },
+    {
+      "from": 60,
+      "label": "",
+      "to": 75,
+      "category": "frequency",
+      "distance": 0
+    },
+    {
+      "from": 62,
+      "label": "",
+      "to": 75,
+      "category": "frequency",
+      "distance": 0
+    },
+    {
+      "from": 64,
+      "label": "",
+      "to": 75,
+      "category": "frequency",
+      "distance": 0
+    },
+    {
+      "from": 66,
+      "label": "",
+      "to": 75,
+      "category": "frequency",
+      "distance": 0
+    },
+    {
+      "from": 68,
+      "label": "",
+      "to": 75,
+      "category": "frequency",
+      "distance": 0
+    },
+    {
+      "from": 70,
+      "label": "",
+      "to": 75,
+      "category": "frequency",
+      "distance": 0
+    },
+    {
+      "from": 72,
+      "label": "",
+      "to": 75,
+      "category": "frequency",
+      "distance": 0
+    },
+    {
+      "from": 74,
+      "label": "",
+      "to": 75,
+      "category": "frequency",
+      "distance": 0
+    }
+  ],
+  "edges": [
+    {
+      "id": 64,
+      "label": "says",
+      "category": "other",
+      "distance": 0
+    },
+    {
+      "id": 19,
+      "label": "keyword",
+      "category": "keyword",
+      "distance": 0
+    },
+    {
+      "id": 62,
+      "label": "Isa",
+      "category": "other",
+      "distance": 0
+    },
+    {
+      "id": 60,
+      "label": "CJP",
+      "category": "other",
+      "distance": 0
+    },
+    {
+      "id": 68,
+      "label": "seeking",
+      "category": "other",
+      "distance": 0
+    },
+    {
+      "id": 66,
+      "label": "SC",
+      "category": "other",
+      "distance": 0
+    },
+    {
+      "id": 72,
+      "label": "run",
+      "category": "other",
+      "distance": 0
+    },
+    {
+      "id": 70,
+      "label": "clarity",
+      "category": "other",
+      "distance": 0
+    },
+    {
+      "id": 58,
+      "label": "disqualification",
+      "category": "other",
+      "distance": 0
+    },
+    {
+      "id": 74,
+      "label": "up",
+      "category": "other",
+      "distance": 0
+    },
+    {
+      "id": 18,
+      "label": "elections",
+      "category": "other",
+      "distance": 0
+    },
+    {
+      "id": 23,
+      "label": "seeking clarity",
+      "category": "other",
+      "distance": 0
+    },
+    {
+      "id": 24,
+      "label": "Lifetime",
+      "category": "other",
+      "distance": 0
+    },
+    {
+      "id": 43,
+      "label": "frequency",
+      "category": "frequency",
+      "distance": 0
+    },
+    {
+      "id": 50,
+      "label": "CJP Isa",
+      "category": "other",
+      "distance": 0
+    },
+    {
+      "id": 45,
+      "label": "Person",
+      "category": "other",
+      "distance": 0
+    },
+    {
+      "id": 47,
+      "label": "Organization",
+      "category": "other",
+      "distance": 0
+    },
+    {
+      "id": 75,
+      "label": "related",
+      "category": "related",
+      "distance": 0
+    }
+  ]
+}

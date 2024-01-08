@@ -1,5 +1,5 @@
 class GraphShow():
-    """"Create demo page"""
+    """Create demo page"""
     def __init__(self):
         self.base = '''
     <html>
@@ -26,7 +26,6 @@ class GraphShow():
       var options = {
           nodes: {
               shape: 'circle',
-              size: 15,
               font: {
                   size: 15
               }
@@ -36,7 +35,6 @@ class GraphShow():
                   size: 10,
                   align: 'center'
               },
-              color: 'red',
               arrows: {
                   to: {enabled: true, scaleFactor: 1.2}
               },
@@ -47,68 +45,158 @@ class GraphShow():
           }
       };
 
+      
+      data.nodes.forEach(function (node) {
+        if (node.category === 'frequency') {
+          node.color = 'lightblue';
+        } else if (node.category === 'keyword') {
+          node.color = 'lightgreen';
+        } else if (node.category === 'related') {
+          node.color = 'lightcoral';
+        } else {
+          node.color = 'grey';
+        }
+      });
+
+      data.edges.forEach(function (edge) {
+        if (edge.category === 'frequency') {
+          edge.color = { color: 'blue' };
+        } else if (edge.category === 'keyword') {
+          edge.color = { color: 'green' };
+        } else if (edge.category === 'related') {
+          edge.color = { color: 'red' };
+        } else {
+          edge.color = { color: 'black' };
+        }
+      });
+
       var network = new vis.Network(container, data, options);
 
     </script>
     </body>
     </html>
     '''
-    
 
-    def create_page(self, events):
-        """Read data"""
-        nodes = []
-        for event in events:
-            nodes.append(event[0])
-            nodes.append(event[1])
-        node_dict = {node: index for index, node in enumerate(nodes)}
-
-        data_nodes = []
-        data_edges = []
-        for node, id in node_dict.items():
-            data = {}
-            data["group"] = 'Event'
-            data["id"] = id
-            data["label"] = node
-            data_nodes.append(data)
-
-        for edge in events:
-            data = {}
-            data['from'] = node_dict.get(edge[0])
-            data['label'] = ''
-            data['to'] = node_dict.get(edge[1])
-            data_edges.append(data)
-
-        self.create_html(data_nodes, data_edges)
-        return
-    def return_egde(self, events):
-        """Read data"""
-        nodes = []
-        for event in events:
-            nodes.append(event[0])
-            nodes.append(event[1])
-        node_dict = {node: index for index, node in enumerate(nodes)}
-
-        data_nodes = []
-        data_edges = []
-        for node, id in node_dict.items():
-            data = {}
-            data["group"] = 'Event'
-            data["id"] = id
-            data["label"] = node
-            data_nodes.append(data)
-
-        for edge in events:
-            data = {}
-            data['from'] = node_dict.get(edge[0])
-            data['label'] = ''
-            data['to'] = node_dict.get(edge[1])
-            data_edges.append(data)
-        self.create_html(data_nodes, data_edges)
-        return data_edges,data_nodes
     def create_html(self, data_nodes, data_edges):
         """Generate html file"""
         f = open('graph_show.html', 'w+')
         html = self.base.replace('data_nodes', str(data_nodes)).replace('data_edges', str(data_edges))
         f.write(html)
         f.close()
+
+    # def create_page(self, events):
+    #     """Read data and assign edge and node colors based on categories"""
+    #     nodes = []
+    #     for event in events:
+    #         nodes.append(event[0])
+    #         nodes.append(event[1])
+    #     node_dict = {node: index for index, node in enumerate(nodes)}
+
+    #     data_nodes = []
+    #     data_edges = []
+    #     for node, id in node_dict.items():
+    #         data = {
+    #             "id": id,
+    #             "label": node,
+    #             "category": 'frequency' if 'frequency' in node else 'keyword' if 'keyword' in node else 'related' if 'related' in node else 'other'
+    #         }
+
+    #         data_nodes.append(data)
+
+    #     for edge in events:
+    #         data = {
+    #             'from': node_dict.get(edge[0]),
+    #             'label': '',
+    #             'to': node_dict.get(edge[1]),
+    #             'category': 'frequency' if 'frequency' in edge else 'keyword' if 'keyword' in edge else 'related' if 'related' in edge else 'other'
+    #         }
+
+    #         data_edges.append(data)
+
+    #     self.create_html(data_nodes, data_edges)
+    #     return
+
+    def return_edge(self, events):
+        """Read data"""
+        nodes = []
+        for event in events:
+            nodes.append(event[0])
+            nodes.append(event[1])
+        node_dict = {node: index for index, node in enumerate(nodes)}
+
+        data_nodes = []
+        data_edges = []
+        for node, id in node_dict.items():
+            data = {
+                "id": id,
+                "label": node,
+                "category": 'frequency' if 'frequency' in node else 'keyword' if 'keyword' in node else 'related' if 'related' in node else 'other'
+            }
+
+            data_nodes.append(data)
+
+        for edge in events:
+            data = {
+                'from': node_dict.get(edge[0]),
+                'label': '',
+                'to': node_dict.get(edge[1]),
+                'category': 'frequency' if 'frequency' in edge else 'keyword' if 'keyword' in edge else 'related' if 'related' in edge else 'other'
+            }
+
+            data_edges.append(data)
+
+        self.create_html(data_nodes, data_edges)
+        return data_edges, data_nodes
+    def create_page(self, events):
+        """Read data and assign edge and node colors based on categories"""
+        nodes = []
+        for event in events:
+            nodes.append(event[0])
+            nodes.append(event[1])
+        node_dict = {node: index for index, node in enumerate(nodes)}
+
+        data_nodes = []
+        data_edges = []
+        for node, id in node_dict.items():
+            category = 'frequency' if 'frequency' in node else 'keyword' if 'keyword' in node else 'related' if 'related' in node else 'other'
+            data = {
+                "id": id,
+                "label": node,
+                "color": {'background': self.get_node_color(category), 'border': 'black'}
+            }
+
+            data_nodes.append(data)
+
+        for edge in events:
+            category = 'frequency' if 'frequency' in edge else 'keyword' if 'keyword' in edge else 'related' if 'related' in edge else 'other'
+            data = {
+                'from': node_dict.get(edge[0]),
+                'label': '',
+                'to': node_dict.get(edge[1]),
+                'color': {'color': self.get_edge_color(category)}
+            }
+
+            data_edges.append(data)
+
+        self.create_html(data_nodes, data_edges)
+        return
+
+    def get_node_color(self, category):
+        if category == 'frequency':
+            return 'lightblue'
+        elif category == 'keyword':
+            return 'lightgreen'
+        elif category == 'related':
+            return 'lightcoral'
+        else:
+            return 'white'
+
+    def get_edge_color(self, category):
+        if category == 'frequency':
+            return 'blue'
+        elif category == 'keyword':
+            return 'green'
+        elif category == 'related':
+            return 'red'
+        else:
+            return 'gray'

@@ -1,8 +1,10 @@
 import re
 from collections import Counter
 import spacy
+import json
 from graph_show import GraphShow
 from textrank import TextRank
+from json_form import format_json_file
 from BFS import GraphProcessor
 
 nlp = spacy.load('en_core_web_lg')
@@ -136,12 +138,21 @@ class NewsMining():
     def collect_coexist(self, ner_sents, ners):
         """Construct NER co-occurrence matrices"""
         co_list = []
+        print('NER')
+        print(ner_sents)
+        print('NER')
+        print(ners)
         for words in ner_sents:
             co_ners = set(ners).intersection(set(words))
+            # print(co_ners)
+            
             co_info = self.combination(list(co_ners))
             co_list += co_info
         if not co_list:
             return []
+        #co occurence on the base on of intersection
+        
+        print(Counter(co_list).most_common())
         return {i[0]: i[1] for i in Counter(co_list).most_common()}
 
     def combination(self, a):
@@ -154,6 +165,7 @@ class NewsMining():
                 if i == j:
                     continue
                 combines.append('@'.join([i, j]))
+        # print(combines)
         return combines
 
     def main(self, content):
@@ -190,49 +202,85 @@ class NewsMining():
                 ner_sents.append(
                     [token.text + '/' + token.label_ for token in sent.ents])
 
-        # 03 get keywords
+        
+        #       03 get keywords
         keywords = [i[0] for i in self.extract_keywords(words_postags)]
         for keyword in keywords:
             name = keyword
             cate = 'keyword'
             events.append([name, cate])
+            
+        # print(keywords)
+        #For instance, if there is a triple (subject, verb, object) such as ("cat", "chase", "mouse"), and "cat" and "mouse" 
+        # are keywords identified earlier, then an event of type "related" could be created to signify the relationship between "cat" and "mouse" through the action "chase."
+        # print(events)
 
-        # 04 add triples to event only the word in keyword
         for t in triples:
             if (t[0] in keywords or t[1] in keywords) and len(t[0]) > 1 and len(t[1]) > 1:
                 events.append([t[0], t[1]])
 
         # 05 get word frequency and add to events
+        #identifies the most common words (nouns, proper nouns, and verbs) in the text and categorizes them as "frequency."
         word_dict = [i for i in Counter([i[0] for i in words_postags if i[1] in [
-                                        'NOUN', 'PROPN', 'VERB'] and len(i[0]) > 1]).most_common()][:10]
+                                            'NOUN', 'PROPN', 'VERB'] and len(i[0]) > 1]).most_common()][:10]
+        # print(word_dict)
         for wd in word_dict:
             name = wd[0]
             cate = 'frequency'
             events.append([name, cate])
-
-        # 06 get NER from whole article
         ner_dict = {i[0]: i[1] for i in Counter(ners).most_common(20)}
+        # print(ner_dict)
         for ner in ner_dict:
             name = ner.split('/')[0]  # Jessica Miller
             cate = self.ner_dict[ner.split('/')[1]]  # PERSON
             events.append([name, cate])
-
+        # print(events)
         # 07 get all NER entity co-occurrence information
         # here ner_dict is from above 06
         co_dict = self.collect_coexist(ner_sents, list(ner_dict.keys()))
         co_events = [[i.split('@')[0].split(
             '/')[0], i.split('@')[1].split('/')[0]] for i in co_dict]
         events += co_events
+        print()
+        print(len(events))
+        print(events)
+        # print(co_events)
+        # print(triples)
+        for t in triples:
+            if t[0] in keywords:
+                events.append([t[0], 'related', t[1]])
 
+            if t[1] in keywords:
+                events.append([t[1], 'related', t[0]])
+
+        # Add edges between keywords and frequency
+        for wd in word_dict:
+            if wd[0] in keywords:
+                # print(wd[0])
+                events.append([wd[0], 'related', 'frequency'])
+        # print(word_dict)
         # 08 show event graph
+        # print(events)
+        # for keyword in keywords:
+        #     for org_ner in [ner for ner in ner_dict.keys() if 'ORG' in ner]:
+        #         events.append([keyword, 'Organization', org_ner])
+        #         events.append(['Organization',keyword,  org_ner])
+        #         break
+        #     break
+        
         self.graph_shower.create_page(events)
-        nodes,edge=self.graph_shower.return_egde(events)
-        # print(edge,nodes)
-        g=GraphProcessor(edge,nodes)
-        keyword = 'appoint'  # Change this to the desired keyword
-        result = g.bfs_related_nodes(keyword)
-        print(result)    
-        # graph = dict(zip(nodes, edge.value()))
-        # start_node = "pakistan"
-        # result = bfs(graph, start_node)
-        # print("BFS Result:", result)
+        nodes,edge=self.graph_shower.return_edge(events)
+        data = {'nodes': nodes, 'edges': edge}
+        
+        with open('graph_data.json', 'w') as json_file:
+            json.dump(data, json_file)
+        for node in nodes:
+            node['distance'] = 0
+        for edges in edge:
+            edges['distance'] = 0
+        # print(edge)
+        data={'nodes':nodes,"edges":edge}
+        with open("query_graph.json",'w') as file:
+            json.dump(data,file)            
+        format_json_file('graph_data.json')
+        format_json_file('query_graph.json')

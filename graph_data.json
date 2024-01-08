@@ -1,0 +1,324 @@
+{
+  "nodes": [
+    {
+      "from": 64,
+      "label": "",
+      "to": 19,
+      "category": "keyword"
+    },
+    {
+      "from": 62,
+      "label": "",
+      "to": 19,
+      "category": "keyword"
+    },
+    {
+      "from": 60,
+      "label": "",
+      "to": 19,
+      "category": "keyword"
+    },
+    {
+      "from": 68,
+      "label": "",
+      "to": 19,
+      "category": "keyword"
+    },
+    {
+      "from": 66,
+      "label": "",
+      "to": 19,
+      "category": "keyword"
+    },
+    {
+      "from": 72,
+      "label": "",
+      "to": 19,
+      "category": "keyword"
+    },
+    {
+      "from": 70,
+      "label": "",
+      "to": 19,
+      "category": "keyword"
+    },
+    {
+      "from": 58,
+      "label": "",
+      "to": 19,
+      "category": "keyword"
+    },
+    {
+      "from": 74,
+      "label": "",
+      "to": 19,
+      "category": "keyword"
+    },
+    {
+      "from": 18,
+      "label": "",
+      "to": 19,
+      "category": "keyword"
+    },
+    {
+      "from": 62,
+      "label": "",
+      "to": 64,
+      "category": "other"
+    },
+    {
+      "from": 66,
+      "label": "",
+      "to": 23,
+      "category": "other"
+    },
+    {
+      "from": 24,
+      "label": "",
+      "to": 43,
+      "category": "frequency"
+    },
+    {
+      "from": 58,
+      "label": "",
+      "to": 43,
+      "category": "frequency"
+    },
+    {
+      "from": 60,
+      "label": "",
+      "to": 43,
+      "category": "frequency"
+    },
+    {
+      "from": 62,
+      "label": "",
+      "to": 43,
+      "category": "frequency"
+    },
+    {
+      "from": 64,
+      "label": "",
+      "to": 43,
+      "category": "frequency"
+    },
+    {
+      "from": 66,
+      "label": "",
+      "to": 43,
+      "category": "frequency"
+    },
+    {
+      "from": 68,
+      "label": "",
+      "to": 43,
+      "category": "frequency"
+    },
+    {
+      "from": 70,
+      "label": "",
+      "to": 43,
+      "category": "frequency"
+    },
+    {
+      "from": 72,
+      "label": "",
+      "to": 43,
+      "category": "frequency"
+    },
+    {
+      "from": 74,
+      "label": "",
+      "to": 43,
+      "category": "frequency"
+    },
+    {
+      "from": 50,
+      "label": "",
+      "to": 45,
+      "category": "other"
+    },
+    {
+      "from": 66,
+      "label": "",
+      "to": 47,
+      "category": "other"
+    },
+    {
+      "from": 66,
+      "label": "",
+      "to": 50,
+      "category": "other"
+    },
+    {
+      "from": 50,
+      "label": "",
+      "to": 66,
+      "category": "other"
+    },
+    {
+      "from": 62,
+      "label": "",
+      "to": 75,
+      "category": "related"
+    },
+    {
+      "from": 64,
+      "label": "",
+      "to": 75,
+      "category": "related"
+    },
+    {
+      "from": 66,
+      "label": "",
+      "to": 75,
+      "category": "related"
+    },
+    {
+      "from": 58,
+      "label": "",
+      "to": 75,
+      "category": "frequency"
+    },
+    {
+      "from": 60,
+      "label": "",
+      "to": 75,
+      "category": "frequency"
+    },
+    {
+      "from": 62,
+      "label": "",
+      "to": 75,
+      "category": "frequency"
+    },
+    {
+      "from": 64,
+      "label": "",
+      "to": 75,
+      "category": "frequency"
+    },
+    {
+      "from": 66,
+      "label": "",
+      "to": 75,
+      "category": "frequency"
+    },
+    {
+      "from": 68,
+      "label": "",
+      "to": 75,
+      "category": "frequency"
+    },
+    {
+      "from": 70,
+      "label": "",
+      "to": 75,
+      "category": "frequency"
+    },
+    {
+      "from": 72,
+      "label": "",
+      "to": 75,
+      "category": "frequency"
+    },
+    {
+      "from": 74,
+      "label": "",
+      "to": 75,
+      "category": "frequency"
+    }
+  ],
+  "edges": [
+    {
+      "id": 64,
+      "label": "says",
+      "category": "other"
+    },
+    {
+      "id": 19,
+      "label": "keyword",
+      "category": "keyword"
+    },
+    {
+      "id": 62,
+      "label": "Isa",
+      "category": "other"
+    },
+    {
+      "id": 60,
+      "label": "CJP",
+      "category": "other"
+    },
+    {
+      "id": 68,
+      "label": "seeking",
+      "category": "other"
+    },
+    {
+      "id": 66,
+      "label": "SC",
+      "category": "other"
+    },
+    {
+      "id": 72,
+      "label": "run",
+      "category": "other"
+    },
+    {
+      "id": 70,
+      "label": "clarity",
+      "category": "other"
+    },
+    {
+      "id": 58,
+      "label": "disqualification",
+      "category": "other"
+    },
+    {
+      "id": 74,
+      "label": "up",
+      "category": "other"
+    },
+    {
+      "id": 18,
+      "label": "elections",
+      "category": "other"
+    },
+    {
+      "id": 23,
+      "label": "seeking clarity",
+      "category": "other"
+    },
+    {
+      "id": 24,
+      "label": "Lifetime",
+      "category": "other"
+    },
+    {
+      "id": 43,
+      "label": "frequency",
+      "category": "frequency"
+    },
+    {
+      "id": 50,
+      "label": "CJP Isa",
+      "category": "other"
+    },
+    {
+      "id": 45,
+      "label": "Person",
+      "category": "other"
+    },
+    {
+      "id": 47,
+      "label": "Organization",
+      "category": "other"
+    },
+    {
+      "id": 75,
+      "label": "related",
+      "category": "related"
+    }
+  ]
+}

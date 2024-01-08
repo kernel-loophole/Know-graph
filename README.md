@@ -1,68 +1,30 @@
-# Graph Processor
+# News Graph
 
-## Introduction
+Key information extration from text and graph visilization. Inspired by [TextGrapher](https://github.com/liuhuanyong/TextGrapher).
 
-This Python script, `graph_processor.py`, is designed to process graph data stored in a JSON file and perform Breadth-First Search (BFS) related operations.
+# Project Introduction
 
-## Features
+How to represent a text in a simple way is a chanllenge topic. This peoject try to extraction key information from the text by NLP methods, which contain NER extraction, relation detection, keywords extraction, frequencies words extraction. And finally show the key information in a graph way.
 
-- **Build Graph from JSON:** Reads a JSON file containing node and edge information and builds a graph structure.
-
-- **BFS Related Nodes:** Performs BFS traversal starting from a specified keyword and returns the matching nodes.
-
-- **Get Labels by IDs:** Retrieves labels for given node IDs.
-
-## Requirements
-
-- Python 3.x
-- `graph_show` 
-## Installation
-
-1. Clone the repository:
-
-    ```bash
-    git clone https://github.com/kernel-loophole/Know-graph.git
-    cd Know-graph
-    ```
-
-2. Install dependencies:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3. Run the script:
-
-    ```bash
-    python graph_processor.py
-    ```
-
-## Usage
-
-1. Ensure you have a valid `graph_data.json` file containing node and edge information.
-
-2. Instantiate the `GraphProcessor` class with the JSON file path:
-
-    ```python
-    processor = GraphProcessor('graph_data.json')
-    ```
-
-3. Use the provided methods:
-
-    ```python
-    keyword_id = processor.find_matching_id('YourKeyword')
-    related_ids = processor.bfs_related_nodes(keyword_id)
-    matching_labels = processor.get_labels_by_ids(related_ids)
-    ```
-
-## Example
+# How to use
 
 ```python
-processor = GraphProcessor('graph_data.json')
-json_data = read_json_file('graph_data.json')
-keyword_id = find_matching_id(json_data, 'Colombo')
-related_ids = processor.bfs_related_nodes(keyword_id)
-matching_labels = processor.get_labels_by_ids(related_ids)
+from news_graph import NewsMining
+content = 'Input you text here'
+Miner = NewsMining()
+Miner.main(content)
+```
 
-print("Matching labels:")
-print(matching_labels)
+This will generate the `graph.html`. 
+
+# Example Demo
+
+1) [Blockbuster *The Wandering Earth*](https://www.theverge.com/2019/2/9/18218479/the-wandering-earth-review-film-china-first-science-fiction-blockbuster-cixin-liu-gravity-the-core)
+![image1](https://ws4.sinaimg.cn/large/006tNc79gy1g02ikc4mqjj30n60ot42a.jpg)
+
+2) [Tokyo Marathon 2019 Elite Field](https://www.marathon.tokyo/en/news/detail/news_001178.html)
+![image](https://user-images.githubusercontent.com/10768193/83982855-d4c93000-a964-11ea-86d8-1dd19f7d5334.png)
+)
+
+3) [EVEN ANONYMOUS CODERS LEAVE FINGERPRINTS](https://www.wired.com/story/machine-learning-identify-anonymous-code/?utm_campaign=Deep%20Learning%20Weekly&utm_medium=email&utm_source=Revue%20newsletter)
+![image3](https://ws3.sinaimg.cn/large/006tNc79gy1g02hulrjx8j30i00pvjuv.jpg)
