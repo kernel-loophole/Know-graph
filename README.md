@@ -23,7 +23,7 @@ This will generate the `graph.html`.
 
 ![image1](IMG2.png)
 
-2) (IMG.png)
+2) ![image1](IMG.png)
 )
 
 3) [EVEN ANONYMOUS CODERS LEAVE FINGERPRINTS](https://www.wired.com/story/machine-learning-identify-anonymous-code/?utm_campaign=Deep%20Learning%20Weekly&utm_medium=email&utm_source=Revue%20newsletter)
