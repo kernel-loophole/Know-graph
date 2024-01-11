@@ -14,63 +14,76 @@ class GraphShow():
 
     <script type="text/javascript">
       var nodes = data_nodes;
-      var edges = data_edges;
+var edges = data_edges;
 
-      var container = document.getElementById("VIS_draw");
+var container = document.getElementById("VIS_draw");
 
-      var data = {
-        nodes: nodes,
-        edges: edges
-      };
+var data = {
+  nodes: nodes,
+  edges: edges
+};
 
-      var options = {
-          nodes: {
-              shape: 'circle',
-              font: {
-                  size: 15
-              }
-          },
-          edges: {
-              font: {
-                  size: 10,
-                  align: 'center'
-              },
-              arrows: {
-                  to: {enabled: true, scaleFactor: 1.2}
-              },
-              smooth: {enabled: true}
-          },
-          physics: {
-              enabled: true
-          }
-      };
+var options = {
+  nodes: {
+    shape: 'circle',
+    font: {
+      size: 15
+    }
+  },
+  edges: {
+    font: {
+      size: 10,
+      align: 'center'
+    },
+    arrows: {
+      to: { enabled: true, scaleFactor: 1.2 }
+    },
+    smooth: { enabled: true }
+  },
+  physics: {
+    enabled: true
+  }
+};
 
-      
-      data.nodes.forEach(function (node) {
-        if (node.category === 'frequency') {
-          node.color = 'lightblue';
-        } else if (node.category === 'keyword') {
-          node.color = 'lightgreen';
-        } else if (node.category === 'related') {
-          node.color = 'lightcoral';
-        } else {
-          node.color = 'grey';
-        }
-      });
+data.nodes.forEach(function (node) {
+  if (node.category === 'frequency') {
+    node.color = 'lightblue';
+  } else if (node.category === 'keyword') {
+    node.color = 'lightgreen';
+  } 
+  else if (node.category === 'Organization') {
+    node.color = 'red';
+  }else if (node.category === 'Location') {
+    node.color = 'black';
+  }else if (node.category === 'related') {
+    node.color = 'lightcoral';
+  } 
+  // Set a common size for all nodes
+});
 
-      data.edges.forEach(function (edge) {
-        if (edge.category === 'frequency') {
-          edge.color = { color: 'blue' };
-        } else if (edge.category === 'keyword') {
-          edge.color = { color: 'green' };
-        } else if (edge.category === 'related') {
-          edge.color = { color: 'red' };
-        } else {
-          edge.color = { color: 'black' };
-        }
-      });
+data.nodes.forEach(function (node) {
+  // Adjust node color based on value from result_dic
+  if (node.value) {
+    // Assuming result_dic values are in the range [0, 1]
+    var hue = Math.floor((1 - node.value) * 120); // Adjust hue based on value
+    node.color = 'lightyellow';
+  }
+});
 
-      var network = new vis.Network(container, data, options);
+data.edges.forEach(function (edge) {
+  if (edge.category === 'frequency') {
+    edge.color = { color: 'blue' };
+  } else if (edge.category === 'keyword') {
+    edge.color = { color: 'green' };
+  } else if (edge.category === 'related') {
+    edge.color = { color: 'red' };
+  } else {
+    edge.color = { color: 'black' };
+  }
+});
+
+var network = new vis.Network(container, data, options);
+
 
     </script>
     </body>
@@ -84,40 +97,8 @@ class GraphShow():
         f.write(html)
         f.close()
 
-    # def create_page(self, events):
-    #     """Read data and assign edge and node colors based on categories"""
-    #     nodes = []
-    #     for event in events:
-    #         nodes.append(event[0])
-    #         nodes.append(event[1])
-    #     node_dict = {node: index for index, node in enumerate(nodes)}
-
-    #     data_nodes = []
-    #     data_edges = []
-    #     for node, id in node_dict.items():
-    #         data = {
-    #             "id": id,
-    #             "label": node,
-    #             "category": 'frequency' if 'frequency' in node else 'keyword' if 'keyword' in node else 'related' if 'related' in node else 'other'
-    #         }
-
-    #         data_nodes.append(data)
-
-    #     for edge in events:
-    #         data = {
-    #             'from': node_dict.get(edge[0]),
-    #             'label': '',
-    #             'to': node_dict.get(edge[1]),
-    #             'category': 'frequency' if 'frequency' in edge else 'keyword' if 'keyword' in edge else 'related' if 'related' in edge else 'other'
-    #         }
-
-    #         data_edges.append(data)
-
-    #     self.create_html(data_nodes, data_edges)
-    #     return
-
-    def return_edge(self, events):
-        """Read data"""
+    def return_edge(self, events, result_dic):
+        """Read data and values"""
         nodes = []
         for event in events:
             nodes.append(event[0])
@@ -130,7 +111,9 @@ class GraphShow():
             data = {
                 "id": id,
                 "label": node,
-                "category": 'frequency' if 'frequency' in node else 'keyword' if 'keyword' in node else 'related' if 'related' in node else 'other'
+                "category": 'frequency' if 'frequency' in node else 'keyword' if 'keyword' in node else 'related' if 'related' in node  else 'Organization' if 'Organization' in node else 'Location' if 'Location' in node else 'other',
+                "ner": "PERSON" if "PERSON" in node else "org",
+                "value": result_dic.get(node, 0)  # Get value from result_dic, default to 0 if not present
             }
 
             data_nodes.append(data)
@@ -140,35 +123,37 @@ class GraphShow():
                 'from': node_dict.get(edge[0]),
                 'label': '',
                 'to': node_dict.get(edge[1]),
-                'category': 'frequency' if 'frequency' in edge else 'keyword' if 'keyword' in edge else 'related' if 'related' in edge else 'other'
+                'category': 'frequency' if 'frequency' in edge else 'keyword' if 'keyword' in edge else 'related' if 'related' else 'Organization' if 'Organization' in node in edge else 'Location' if 'Location' in node else 'other'
             }
 
             data_edges.append(data)
 
         self.create_html(data_nodes, data_edges)
         return data_edges, data_nodes
-    def create_page(self, events):
-        """Read data and assign edge and node colors based on categories"""
-        nodes = []
+
+    def create_page(self, events, result_dic):
+        """Read data and values, assign edge and node colors based on categories and values"""
+        nodes = {}
         for event in events:
-            nodes.append(event[0])
-            nodes.append(event[1])
-        node_dict = {node: index for index, node in enumerate(nodes)}
+            nodes[event[0]] = event[1]
+
+        node_dict = nodes
 
         data_nodes = []
         data_edges = []
         for node, id in node_dict.items():
-            category = 'frequency' if 'frequency' in node else 'keyword' if 'keyword' in node else 'related' if 'related' in node else 'other'
+            category = 'frequency' if 'frequency' in id else 'keyword' if 'keyword' in id else 'related' if 'related' in id else 'Organization' if 'Organization' in id else 'Location' if 'Location' in node else 'other'
             data = {
                 "id": id,
                 "label": node,
-                "color": {'background': self.get_node_color(category), 'border': 'black'}
+                "color": {'background': self.get_node_color(category), 'border': 'black'},
+                "value": result_dic.get(node, 0)  # Get value from result_dic, default to 0 if not present
             }
 
             data_nodes.append(data)
 
         for edge in events:
-            category = 'frequency' if 'frequency' in edge else 'keyword' if 'keyword' in edge else 'related' if 'related' in edge else 'other'
+            category = 'frequency' if 'frequency' in edge else 'keyword' if 'keyword' in edge else 'related' if 'related' in edge  else 'other'
             data = {
                 'from': node_dict.get(edge[0]),
                 'label': '',
@@ -188,8 +173,12 @@ class GraphShow():
             return 'lightgreen'
         elif category == 'related':
             return 'lightcoral'
+        elif category=='Organization':
+            return 'red'
+        elif category=='Location':
+          return 'black'
         else:
-            return 'white'
+            return 'blue'
 
     def get_edge_color(self, category):
         if category == 'frequency':
