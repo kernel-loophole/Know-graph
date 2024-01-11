@@ -22,7 +22,8 @@ class GraphProcessor:
     def bfs_related_nodes(self, keyword):
         visited = set()
         result = []
-        
+        re = read_json_file("query_graph.json")
+                
         for start_node in self.graph:
             if str(keyword) in str(start_node) and start_node not in visited:
                 queue = Queue()
