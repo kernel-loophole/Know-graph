@@ -10,64 +10,77 @@
     <div id="VIS_draw"></div>
 
     <script type="text/javascript">
-      var nodes = [{'id': 64, 'label': 'says', 'category': 'other'}, {'id': 19, 'label': 'keyword', 'category': 'keyword'}, {'id': 62, 'label': 'Isa', 'category': 'other'}, {'id': 60, 'label': 'CJP', 'category': 'other'}, {'id': 68, 'label': 'seeking', 'category': 'other'}, {'id': 66, 'label': 'SC', 'category': 'other'}, {'id': 72, 'label': 'run', 'category': 'other'}, {'id': 70, 'label': 'clarity', 'category': 'other'}, {'id': 58, 'label': 'disqualification', 'category': 'other'}, {'id': 74, 'label': 'up', 'category': 'other'}, {'id': 18, 'label': 'elections', 'category': 'other'}, {'id': 23, 'label': 'seeking clarity', 'category': 'other'}, {'id': 24, 'label': 'Lifetime', 'category': 'other'}, {'id': 43, 'label': 'frequency', 'category': 'frequency'}, {'id': 50, 'label': 'CJP Isa', 'category': 'other'}, {'id': 45, 'label': 'Person', 'category': 'other'}, {'id': 47, 'label': 'Organization', 'category': 'other'}, {'id': 75, 'label': 'related', 'category': 'related'}];
-      var edges = [{'from': 64, 'label': '', 'to': 19, 'category': 'keyword'}, {'from': 62, 'label': '', 'to': 19, 'category': 'keyword'}, {'from': 60, 'label': '', 'to': 19, 'category': 'keyword'}, {'from': 68, 'label': '', 'to': 19, 'category': 'keyword'}, {'from': 66, 'label': '', 'to': 19, 'category': 'keyword'}, {'from': 72, 'label': '', 'to': 19, 'category': 'keyword'}, {'from': 70, 'label': '', 'to': 19, 'category': 'keyword'}, {'from': 58, 'label': '', 'to': 19, 'category': 'keyword'}, {'from': 74, 'label': '', 'to': 19, 'category': 'keyword'}, {'from': 18, 'label': '', 'to': 19, 'category': 'keyword'}, {'from': 62, 'label': '', 'to': 64, 'category': 'other'}, {'from': 66, 'label': '', 'to': 23, 'category': 'other'}, {'from': 24, 'label': '', 'to': 43, 'category': 'frequency'}, {'from': 58, 'label': '', 'to': 43, 'category': 'frequency'}, {'from': 60, 'label': '', 'to': 43, 'category': 'frequency'}, {'from': 62, 'label': '', 'to': 43, 'category': 'frequency'}, {'from': 64, 'label': '', 'to': 43, 'category': 'frequency'}, {'from': 66, 'label': '', 'to': 43, 'category': 'frequency'}, {'from': 68, 'label': '', 'to': 43, 'category': 'frequency'}, {'from': 70, 'label': '', 'to': 43, 'category': 'frequency'}, {'from': 72, 'label': '', 'to': 43, 'category': 'frequency'}, {'from': 74, 'label': '', 'to': 43, 'category': 'frequency'}, {'from': 50, 'label': '', 'to': 45, 'category': 'other'}, {'from': 66, 'label': '', 'to': 47, 'category': 'other'}, {'from': 66, 'label': '', 'to': 50, 'category': 'other'}, {'from': 50, 'label': '', 'to': 66, 'category': 'other'}, {'from': 62, 'label': '', 'to': 75, 'category': 'related'}, {'from': 64, 'label': '', 'to': 75, 'category': 'related'}, {'from': 66, 'label': '', 'to': 75, 'category': 'related'}, {'from': 58, 'label': '', 'to': 75, 'category': 'frequency'}, {'from': 60, 'label': '', 'to': 75, 'category': 'frequency'}, {'from': 62, 'label': '', 'to': 75, 'category': 'frequency'}, {'from': 64, 'label': '', 'to': 75, 'category': 'frequency'}, {'from': 66, 'label': '', 'to': 75, 'category': 'frequency'}, {'from': 68, 'label': '', 'to': 75, 'category': 'frequency'}, {'from': 70, 'label': '', 'to': 75, 'category': 'frequency'}, {'from': 72, 'label': '', 'to': 75, 'category': 'frequency'}, {'from': 74, 'label': '', 'to': 75, 'category': 'frequency'}];
+      var nodes = [{'id': 170, 'label': 'United', 'category': 'other', 'ner': 'org', 'value': 0}, {'id': 19, 'label': 'keyword', 'category': 'keyword', 'ner': 'org', 'value': 0}, {'id': 2, 'label': 'Musk', 'category': 'other', 'ner': 'org', 'value': 0}, {'id': 168, 'label': 'Corporation', 'category': 'other', 'ner': 'org', 'value': 0}, {'id': 6, 'label': 'York', 'category': 'other', 'ner': 'org', 'value': 0}, {'id': 8, 'label': 'City', 'category': 'other', 'ner': 'org', 'value': 0}, {'id': 10, 'label': 'partnership', 'category': 'other', 'ner': 'org', 'value': 0}, {'id': 12, 'label': 'New', 'category': 'other', 'ner': 'org', 'value': 0}, {'id': 172, 'label': 'Nations', 'category': 'other', 'ner': 'org', 'value': 0}, {'id': 174, 'label': 'General', 'category': 'other', 'ner': 'org', 'value': 0}, {'id': 18, 'label': 'develop', 'category': 'other', 'ner': 'org', 'value': 0}, {'id': 20, 'label': 'John', 'category': 'other', 'ner': 'org', 'value': 0}, {'id': 39, 'label': 'frequency', 'category': 'frequency', 'ner': 'org', 'value': 0}, {'id': 22, 'label': 'Smith', 'category': 'other', 'ner': 'org', 'value': 0}, {'id': 24, 'label': 'CEO', 'category': 'other', 'ner': 'org', 'value': 0}, {'id': 26, 'label': 'XYZ', 'category': 'other', 'ner': 'org', 'value': 0}, {'id': 30, 'label': 'attended', 'category': 'other', 'ner': 'org', 'value': 0}, {'id': 38, 'label': 'Assembly', 'category': 'other', 'ner': 'org', 'value': 0}, {'id': 155, 'label': 'John Smith', 'category': 'other', 'ner': 'org', 'value': 'PERSON'}, {'id': 55, 'label': 'Person', 'category': 'other', 'ner': 'org', 'value': 0}, {'id': 161, 'label': 'XYZ Corporation', 'category': 'other', 'ner': 'org', 'value': 'ORG'}, {'id': 53, 'label': 'Organization', 'category': 'Organization', 'ner': 'org', 'value': 0}, {'id': 163, 'label': 'the United Nations General Assembly', 'category': 'other', 'ner': 'org', 'value': 'ORG'}, {'id': 159, 'label': 'New York City', 'category': 'other', 'ner': 'org', 'value': 'GPE'}, {'id': 51, 'label': 'Location', 'category': 'Location', 'ner': 'org', 'value': 0}, {'id': 157, 'label': 'Angela Merkel', 'category': 'other', 'ner': 'org', 'value': 'PERSON'}, {'id': 165, 'label': 'Germany', 'category': 'other', 'ner': 'org', 'value': 'GPE'}, {'id': 167, 'label': 'SpaceX', 'category': 'other', 'ner': 'org', 'value': 'ORG'}, {'id': 166, 'label': 'Elon Musk', 'category': 'other', 'ner': 'org', 'value': 'PERSON'}, {'id': 175, 'label': 'related', 'category': 'related', 'ner': 'org', 'value': 0}];
+var edges = [{'from': 170, 'label': '', 'to': 19, 'category': 'keyword'}, {'from': 2, 'label': '', 'to': 19, 'category': 'keyword'}, {'from': 168, 'label': '', 'to': 19, 'category': 'keyword'}, {'from': 6, 'label': '', 'to': 19, 'category': 'keyword'}, {'from': 8, 'label': '', 'to': 19, 'category': 'keyword'}, {'from': 10, 'label': '', 'to': 19, 'category': 'keyword'}, {'from': 12, 'label': '', 'to': 19, 'category': 'keyword'}, {'from': 172, 'label': '', 'to': 19, 'category': 'keyword'}, {'from': 174, 'label': '', 'to': 19, 'category': 'keyword'}, {'from': 18, 'label': '', 'to': 19, 'category': 'keyword'}, {'from': 20, 'label': '', 'to': 39, 'category': 'frequency'}, {'from': 22, 'label': '', 'to': 39, 'category': 'frequency'}, {'from': 24, 'label': '', 'to': 39, 'category': 'frequency'}, {'from': 26, 'label': '', 'to': 39, 'category': 'frequency'}, {'from': 168, 'label': '', 'to': 39, 'category': 'frequency'}, {'from': 30, 'label': '', 'to': 39, 'category': 'frequency'}, {'from': 170, 'label': '', 'to': 39, 'category': 'frequency'}, {'from': 172, 'label': '', 'to': 39, 'category': 'frequency'}, {'from': 174, 'label': '', 'to': 39, 'category': 'frequency'}, {'from': 38, 'label': '', 'to': 39, 'category': 'frequency'}, {'from': 155, 'label': '', 'to': 55, 'category': 'related'}, {'from': 161, 'label': '', 'to': 53, 'category': 'related'}, {'from': 163, 'label': '', 'to': 53, 'category': 'related'}, {'from': 159, 'label': '', 'to': 51, 'category': 'related'}, {'from': 157, 'label': '', 'to': 55, 'category': 'related'}, {'from': 165, 'label': '', 'to': 51, 'category': 'related'}, {'from': 167, 'label': '', 'to': 53, 'category': 'related'}, {'from': 166, 'label': '', 'to': 55, 'category': 'related'}, {'from': 155, 'label': '', 'to': 157, 'category': 'related'}, {'from': 155, 'label': '', 'to': 159, 'category': 'related'}, {'from': 155, 'label': '', 'to': 161, 'category': 'related'}, {'from': 155, 'label': '', 'to': 163, 'category': 'related'}, {'from': 155, 'label': '', 'to': 165, 'category': 'related'}, {'from': 155, 'label': '', 'to': 167, 'category': 'related'}, {'from': 155, 'label': '', 'to': 166, 'category': 'related'}, {'from': 157, 'label': '', 'to': 155, 'category': 'related'}, {'from': 157, 'label': '', 'to': 159, 'category': 'related'}, {'from': 157, 'label': '', 'to': 161, 'category': 'related'}, {'from': 157, 'label': '', 'to': 163, 'category': 'related'}, {'from': 157, 'label': '', 'to': 165, 'category': 'related'}, {'from': 157, 'label': '', 'to': 167, 'category': 'related'}, {'from': 157, 'label': '', 'to': 166, 'category': 'related'}, {'from': 159, 'label': '', 'to': 155, 'category': 'related'}, {'from': 159, 'label': '', 'to': 157, 'category': 'related'}, {'from': 159, 'label': '', 'to': 161, 'category': 'related'}, {'from': 159, 'label': '', 'to': 163, 'category': 'related'}, {'from': 159, 'label': '', 'to': 165, 'category': 'related'}, {'from': 159, 'label': '', 'to': 167, 'category': 'related'}, {'from': 159, 'label': '', 'to': 166, 'category': 'related'}, {'from': 161, 'label': '', 'to': 155, 'category': 'related'}, {'from': 161, 'label': '', 'to': 157, 'category': 'related'}, {'from': 161, 'label': '', 'to': 159, 'category': 'related'}, {'from': 161, 'label': '', 'to': 163, 'category': 'related'}, {'from': 161, 'label': '', 'to': 165, 'category': 'related'}, {'from': 161, 'label': '', 'to': 167, 'category': 'related'}, {'from': 161, 'label': '', 'to': 166, 'category': 'related'}, {'from': 163, 'label': '', 'to': 155, 'category': 'related'}, {'from': 163, 'label': '', 'to': 157, 'category': 'related'}, {'from': 163, 'label': '', 'to': 159, 'category': 'related'}, {'from': 163, 'label': '', 'to': 161, 'category': 'related'}, {'from': 163, 'label': '', 'to': 165, 'category': 'related'}, {'from': 163, 'label': '', 'to': 167, 'category': 'related'}, {'from': 163, 'label': '', 'to': 166, 'category': 'related'}, {'from': 165, 'label': '', 'to': 155, 'category': 'related'}, {'from': 165, 'label': '', 'to': 157, 'category': 'related'}, {'from': 165, 'label': '', 'to': 159, 'category': 'related'}, {'from': 165, 'label': '', 'to': 161, 'category': 'related'}, {'from': 165, 'label': '', 'to': 163, 'category': 'related'}, {'from': 165, 'label': '', 'to': 167, 'category': 'related'}, {'from': 165, 'label': '', 'to': 166, 'category': 'related'}, {'from': 167, 'label': '', 'to': 155, 'category': 'related'}, {'from': 167, 'label': '', 'to': 157, 'category': 'related'}, {'from': 167, 'label': '', 'to': 159, 'category': 'related'}, {'from': 167, 'label': '', 'to': 161, 'category': 'related'}, {'from': 167, 'label': '', 'to': 163, 'category': 'related'}, {'from': 167, 'label': '', 'to': 165, 'category': 'related'}, {'from': 167, 'label': '', 'to': 166, 'category': 'related'}, {'from': 166, 'label': '', 'to': 155, 'category': 'related'}, {'from': 166, 'label': '', 'to': 157, 'category': 'related'}, {'from': 166, 'label': '', 'to': 159, 'category': 'related'}, {'from': 166, 'label': '', 'to': 161, 'category': 'related'}, {'from': 166, 'label': '', 'to': 163, 'category': 'related'}, {'from': 166, 'label': '', 'to': 165, 'category': 'related'}, {'from': 166, 'label': '', 'to': 167, 'category': 'related'}, {'from': 168, 'label': '', 'to': 175, 'category': 'frequency'}, {'from': 170, 'label': '', 'to': 175, 'category': 'frequency'}, {'from': 172, 'label': '', 'to': 175, 'category': 'frequency'}, {'from': 174, 'label': '', 'to': 175, 'category': 'frequency'}];
 
-      var container = document.getElementById("VIS_draw");
+var container = document.getElementById("VIS_draw");
 
-      var data = {
-        nodes: nodes,
-        edges: edges
-      };
+var data = {
+  nodes: nodes,
+  edges: edges
+};
 
-      var options = {
-          nodes: {
-              shape: 'circle',
-              font: {
-                  size: 15
-              }
-          },
-          edges: {
-              font: {
-                  size: 10,
-                  align: 'center'
-              },
-              arrows: {
-                  to: {enabled: true, scaleFactor: 1.2}
-              },
-              smooth: {enabled: true}
-          },
-          physics: {
-              enabled: true
-          }
-      };
+var options = {
+  nodes: {
+    shape: 'circle',
+    font: {
+      size: 15
+    }
+  },
+  edges: {
+    font: {
+      size: 10,
+      align: 'center'
+    },
+    arrows: {
+      to: { enabled: true, scaleFactor: 1.2 }
+    },
+    smooth: { enabled: true }
+  },
+  physics: {
+    enabled: true
+  }
+};
 
-      
-      data.nodes.forEach(function (node) {
-        if (node.category === 'frequency') {
-          node.color = 'lightblue';
-        } else if (node.category === 'keyword') {
-          node.color = 'lightgreen';
-        } else if (node.category === 'related') {
-          node.color = 'lightcoral';
-        } else {
-          node.color = 'grey';
-        }
-      });
+data.nodes.forEach(function (node) {
+  if (node.category === 'frequency') {
+    node.color = 'lightblue';
+  } else if (node.category === 'keyword') {
+    node.color = 'lightgreen';
+  } 
+  else if (node.category === 'Organization') {
+    node.color = 'red';
+  }else if (node.category === 'Location') {
+    node.color = 'black';
+  }else if (node.category === 'related') {
+    node.color = 'lightcoral';
+  } 
+  // Set a common size for all nodes
+});
 
-      data.edges.forEach(function (edge) {
-        if (edge.category === 'frequency') {
-          edge.color = { color: 'blue' };
-        } else if (edge.category === 'keyword') {
-          edge.color = { color: 'green' };
-        } else if (edge.category === 'related') {
-          edge.color = { color: 'red' };
-        } else {
-          edge.color = { color: 'black' };
-        }
-      });
+data.nodes.forEach(function (node) {
+  // Adjust node color based on value from result_dic
+  if (node.value) {
+    // Assuming result_dic values are in the range [0, 1]
+    var hue = Math.floor((1 - node.value) * 120); // Adjust hue based on value
+    node.color = 'lightyellow';
+  }
+});
 
-      var network = new vis.Network(container, data, options);
+data.edges.forEach(function (edge) {
+  if (edge.category === 'frequency') {
+    edge.color = { color: 'blue' };
+  } else if (edge.category === 'keyword') {
+    edge.color = { color: 'green' };
+  } else if (edge.category === 'related') {
+    edge.color = { color: 'red' };
+  } else {
+    edge.color = { color: 'black' };
+  }
+});
+
+var network = new vis.Network(container, data, options);
+
 
     </script>
     </body>
