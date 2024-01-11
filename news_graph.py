@@ -2,6 +2,7 @@ import re
 from collections import Counter
 import spacy
 import json
+from BFS import read_json_file
 from graph_show import GraphShow
 from textrank import TextRank
 from json_form import format_json_file
@@ -138,10 +139,6 @@ class NewsMining():
     def collect_coexist(self, ner_sents, ners):
         """Construct NER co-occurrence matrices"""
         co_list = []
-        print('NER')
-        print(ner_sents)
-        print('NER')
-        print(ners)
         for words in ner_sents:
             co_ners = set(ners).intersection(set(words))
             # print(co_ners)
@@ -151,8 +148,6 @@ class NewsMining():
         if not co_list:
             return []
         #co occurence on the base on of intersection
-        
-        print(Counter(co_list).most_common())
         return {i[0]: i[1] for i in Counter(co_list).most_common()}
 
     def combination(self, a):
@@ -228,8 +223,9 @@ class NewsMining():
             name = wd[0]
             cate = 'frequency'
             events.append([name, cate])
+        # dumpy_ner={i[0]: i[1] for i in Counter(ners).most_common(20)}
         ner_dict = {i[0]: i[1] for i in Counter(ners).most_common(20)}
-        # print(ner_dict)
+        print(ner_dict)
         for ner in ner_dict:
             name = ner.split('/')[0]  # Jessica Miller
             cate = self.ner_dict[ner.split('/')[1]]  # PERSON
@@ -241,11 +237,16 @@ class NewsMining():
         co_events = [[i.split('@')[0].split(
             '/')[0], i.split('@')[1].split('/')[0]] for i in co_dict]
         events += co_events
-        print()
-        print(len(events))
+        print(ner_dict.keys())
         print(events)
-        # print(co_events)
-        # print(triples)
+        result_dict = {}
+
+        for item in ner_dict:
+            parts = item.split('/')
+            if len(parts) == 2:
+                key, value = parts
+                result_dict[key] = value
+        print(result_dict)
         for t in triples:
             if t[0] in keywords:
                 events.append([t[0], 'related', t[1]])
@@ -257,21 +258,17 @@ class NewsMining():
         for wd in word_dict:
             if wd[0] in keywords:
                 # print(wd[0])
-                events.append([wd[0], 'related', 'frequency'])
-        # print(word_dict)
-        # 08 show event graph
-        # print(events)
-        # for keyword in keywords:
-        #     for org_ner in [ner for ner in ner_dict.keys() if 'ORG' in ner]:
-        #         events.append([keyword, 'Organization', org_ner])
-        #         events.append(['Organization',keyword,  org_ner])
-        #         break
-        #     break
-        
-        self.graph_shower.create_page(events)
-        nodes,edge=self.graph_shower.return_edge(events)
+                events.append([wd[0], 'related', 'frequency'])  
+        self.graph_shower.create_page(events,result_dict)
+        nodes,edge=self.graph_shower.return_edge(events,result_dict)
         data = {'nodes': nodes, 'edges': edge}
-        
+        for i in data['edges']:
+            if i['label'] in result_dict.keys():
+                print("found ",i['label'])
+                i['ner']=result_dict[i['label']]
+            else:
+                i['ner']=None
+                
         with open('graph_data.json', 'w') as json_file:
             json.dump(data, json_file)
         for node in nodes:
@@ -284,3 +281,4 @@ class NewsMining():
             json.dump(data,file)            
         format_json_file('graph_data.json')
         format_json_file('query_graph.json')
+       

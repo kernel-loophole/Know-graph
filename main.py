@@ -128,18 +128,18 @@ Updated 8/14/18 2:53 PM PST: This article has been updated to reflect the contri
 # content1="""Quaid-e-Azam Mohammed Ali Jinnah, Pakistan's first Governor General, realised the importance of financial intermediation while he was campaigning for the creation of a separate homeland for the Muslims of the subcontinent. He persuaded the Habib family to establish a commercial bank that could serve the Muslim community. His initiative resulted in the creation of Habib Bank in 1941, with head office in Bombay (now Mumbai) and fixed capital of 25,000 rupees. The bank played an essential role in mobilising funds from the Muslim community to finance the All-India Muslim League's campaign to establish Pakistan. Habib Bank also played an important role in channeling relief funds to Muslims hurt in the communal riots and violence that preceded the departure of the British from British India and the subsequent partition."""
 # test_str="""ISLAMABAD: The World Bank fears that following the upcoming elections, strong and organised vested interests may spur a number of potential reversals on critical policy reforms — committed to multilateral lenders — posing ‘high’ macroeconomic risks to Pakistan.
 # The possible reversals include the rationalisation of gas and electricity subsidies, lower trade tariffs and better property tax realisation."""
-hello_str="Lifetime disqualification: CJP Isa says SC seeking ‘clarity’ in run-up to elections"
+# hello_str="Lifetime disqualification: CJP Isa says SC seeking ‘clarity’ in run-up to elections"
 # dumy_str="ali this job is very importent,you have to go to lahore for this and find someone in xyz park"
 ############### Modify this string index and fecth it #################
 # test_str_1="""Imagine having a conversation with a friend. It’s a normal conversation. You discuss careers, goals and aspirations. 
 # There is a little bit of gossip about your friend’s recent breakup and about two friends who may potentially be dating, 
 # and also about how another friend has lost a job. All is going pretty smoothly. """
-#test_str_1="SHAKESPEARE may have come up with a line for all times when he wrote “to be or not to be”, but in Pakistan we have found a dilemma just as important and worthy of much debate."
+test_str_1="Pakistan was founded by Quaid-e-Azam Muhammad Ali Jinnah in 1947"
 # test_fail="The bank is on the river, and the bank approved my loan application."
-
+ten_ner="In 2022, John Smith, the CEO of XYZ Corporation, attended the United Nations General Assembly in New York City, where he discussed climate change with Angela Merkel, the Chancellor of Germany, and highlighted the company's partnership with SpaceX, headed by Elon Musk, to develop innovative sustainable energy solutions for the future."
 Miner = NewsMining()
 # with open("data.txt",'r') as file:
 #     content=file.read()
-Miner.main(hello_str)
+Miner.main(ten_ner)
 # Miner.main(content4)
 # Miner.main(content3)

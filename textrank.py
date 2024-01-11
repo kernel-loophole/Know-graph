@@ -9,7 +9,6 @@ from collections import defaultdict
 #new_weight(node) = (1 - d) + d * (sum(weight(neighbor) / out_degree(neighbor)) for neighbor in neighbors)
 #The update is based on the weights of neighboring nodes and the number of outgoing edges from each node.
 
-
 class TextrankGraph:
     '''textrank graph'''
     def __init__(self):
@@ -53,10 +52,9 @@ class TextrankGraph:
 
             if abs(step_dict[step] - step_dict[step - 1]) <= self.min_diff:
                 break
-
-            # Append the current nodeweight_dict to the DataFrame
+                    # Append the current nodeweight_dict to the DataFrame
             weight_updates_df = pd.concat([weight_updates_df, pd.DataFrame(nodeweight_dict, index=[step])])
-
+        
         min_rank, max_rank = 0, 0
 
         for w in nodeweight_dict.values():
@@ -67,7 +65,8 @@ class TextrankGraph:
 
         for n, w in nodeweight_dict.items():
             nodeweight_dict[n] = (w - min_rank/10.0) / (max_rank - min_rank/10.0)
-        print(weight_updates_df)
+        print(nodeweight_dict)
+        # print(weight_updates_df)
         return nodeweight_dict
 
    
@@ -78,18 +77,23 @@ class TextRank:
     def __init__(self):
         self.candi_pos = ['NOUN', 'PROPN', 'VERB'] 
         self.stop_pos = ['NUM', 'ADV'] 
-        self.span = 5
+        self.span = 8
 
     def extract_keywords(self, word_list, num_keywords):
+        print(word_list,num_keywords)
         g = TextrankGraph()
         cm = defaultdict(int)
+        #The pairs are created as long as the part-of-speech 
+        # tag of the subsequent word is in the allowed list (self.candi_pos)
         for i, word in enumerate(word_list): # word_list = [['previous', 'ADJ'], ['rumor', 'NOUN']]
+           
             if word[1] in self.candi_pos and len(word[0]) > 1: # word = ['previous', 'ADJ']
                 for j in range(i + 1, i + self.span):
                     if j >= len(word_list):
                         break
                     if word_list[j][1] not in self.candi_pos or word_list[j][1] in self.stop_pos or len(word_list[j][0]) < 2:
                         continue
+                    print(word[0],word_list[j][0])
                     pair = tuple((word[0], word_list[j][0]))
                     cm[(pair)] +=  1
                     # print(pair)
@@ -98,9 +102,9 @@ class TextRank:
         
         # print("++++",self.candi_pos)
         # print(word_list)
-        # print(cm)
+        print(cm)
         for terms, w in cm.items():
-            # print(terms)
+            print(terms[0],terms[1],w)
             g.addEdge(terms[0], terms[1], w)
         nodes_rank = g.rank()
         nodes_rank = sorted(nodes_rank.items(), key=lambda asd:asd[1], reverse=True)
