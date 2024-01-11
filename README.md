@@ -18,12 +18,12 @@ Miner.main(content)
 This will generate the `graph.html`. 
 
 # Example Demo
+# Example sentence
+1) "In 2022, John Smith, the CEO of XYZ Corporation, attended the United Nations General Assembly in New York City, where he discussed climate change with Angela Merkel, the Chancellor of Germany, and highlighted the company's partnership with SpaceX, headed by Elon Musk, to develop innovative sustainable energy solutions for the future."
 
-1) [Blockbuster *The Wandering Earth*](https://www.theverge.com/2019/2/9/18218479/the-wandering-earth-review-film-china-first-science-fiction-blockbuster-cixin-liu-gravity-the-core)
 ![image1](IMG2.png)
 
-2) [Tokyo Marathon 2019 Elite Field](https://www.marathon.tokyo/en/news/detail/news_001178.html)
-![image](IMG.png)
+2) (IMG.png)
 )
 
 3) [EVEN ANONYMOUS CODERS LEAVE FINGERPRINTS](https://www.wired.com/story/machine-learning-identify-anonymous-code/?utm_campaign=Deep%20Learning%20Weekly&utm_medium=email&utm_source=Revue%20newsletter)
