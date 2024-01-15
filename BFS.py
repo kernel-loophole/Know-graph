@@ -92,7 +92,7 @@ def find_matching_id(json_data,keyw):
 if __name__=="__main__":
     processor = GraphProcessor('graph_data.json')
     re=read_json_file("graph_data.json")
-    ids=processor.bfs_related_nodes(find_matching_id(re,'Pakistan')) 
+    ids=processor.bfs_related_nodes(find_matching_id(re,'XYZ Corporation')) 
     print(ids)
     # cal=find_matching_id(re,"AI")
     # distance={}
