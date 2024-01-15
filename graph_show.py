@@ -100,11 +100,19 @@ var network = new vis.Network(container, data, options);
     def return_edge(self, events, result_dic):
         """Read data and values"""
         nodes = []
-        for event in events:
-            nodes.append(event[0])
-            nodes.append(event[1])
+        # for event in events:
+        #     nodes.append(event[0])
+        #     nodes.append(event[1])
+        #     print(f"Node: {event[0]}, Index: {index * 2}")
+        #     print(f"Node: {event[1]}, Index: {index * 2 + 1}")
+        for index, event in enumerate(events):
+          nodes.append(event[0])
+          nodes.append(event[1])
+          # print(f"Node: {event[0]}, Index: {index * 2}")
+          # print(f"Node: {event[1]}, Index: {index * 2 + 1}")
+        # print(nodes)
         node_dict = {node: index for index, node in enumerate(nodes)}
-
+        # print(node_dict)
         data_nodes = []
         data_edges = []
         for node, id in node_dict.items():
@@ -117,7 +125,7 @@ var network = new vis.Network(container, data, options);
             }
 
             data_nodes.append(data)
-
+        # print(events)
         for edge in events:
             data = {
                 'from': node_dict.get(edge[0]),
@@ -127,7 +135,7 @@ var network = new vis.Network(container, data, options);
             }
 
             data_edges.append(data)
-
+        # print(data_nodes,data_edges)
         self.create_html(data_nodes, data_edges)
         return data_edges, data_nodes
 

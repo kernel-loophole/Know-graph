@@ -134,12 +134,14 @@ Updated 8/14/18 2:53 PM PST: This article has been updated to reflect the contri
 # test_str_1="""Imagine having a conversation with a friend. It’s a normal conversation. You discuss careers, goals and aspirations. 
 # There is a little bit of gossip about your friend’s recent breakup and about two friends who may potentially be dating, 
 # and also about how another friend has lost a job. All is going pretty smoothly. """
-test_str_1="Pakistan was founded by Quaid-e-Azam Muhammad Ali Jinnah in 1947"
+test_str_1="Pakistan was founded by Quaid-e-Azam Muhammad Ali Jinnah in 1947."
+test_string_one="Quaid-e-Azam Muhammad Ali Jinnah was good man"
 # test_fail="The bank is on the river, and the bank approved my loan application."
-ten_ner="In 2022, John Smith, the CEO of XYZ Corporation, attended the United Nations General Assembly in New York City, where he discussed climate change with Angela Merkel, the Chancellor of Germany, and highlighted the company's partnership with SpaceX, headed by Elon Musk, to develop innovative sustainable energy solutions for the future."
+ten_ner="In 2022, John Smith, the CEO of XYZ Corporation, attended the United Nations General Assembly in New York City, where he discussed climate change with Angela Merkel, the Chancellor of Germany.He highlighted the company's partnership with SpaceX to Angela Merkel, headed by Elon Musk, to develop innovative sustainable energy solutions for the future."
 Miner = NewsMining()
 # with open("data.txt",'r') as file:
 #     content=file.read()
 Miner.main(ten_ner)
+# Miner.main(test_str_1)
 # Miner.main(content4)
 # Miner.main(content3)

@@ -200,6 +200,7 @@ class NewsMining():
         
         #       03 get keywords
         keywords = [i[0] for i in self.extract_keywords(words_postags)]
+        print(keywords)
         for keyword in keywords:
             name = keyword
             cate = 'keyword'
@@ -213,19 +214,20 @@ class NewsMining():
         for t in triples:
             if (t[0] in keywords or t[1] in keywords) and len(t[0]) > 1 and len(t[1]) > 1:
                 events.append([t[0], t[1]])
-
+        # print(events)
         # 05 get word frequency and add to events
         #identifies the most common words (nouns, proper nouns, and verbs) in the text and categorizes them as "frequency."
         word_dict = [i for i in Counter([i[0] for i in words_postags if i[1] in [
                                             'NOUN', 'PROPN', 'VERB'] and len(i[0]) > 1]).most_common()][:10]
-        # print(word_dict)
+    
         for wd in word_dict:
             name = wd[0]
             cate = 'frequency'
             events.append([name, cate])
+        
         # dumpy_ner={i[0]: i[1] for i in Counter(ners).most_common(20)}
         ner_dict = {i[0]: i[1] for i in Counter(ners).most_common(20)}
-        print(ner_dict)
+        # print(ner_dict)
         for ner in ner_dict:
             name = ner.split('/')[0]  # Jessica Miller
             cate = self.ner_dict[ner.split('/')[1]]  # PERSON
@@ -237,8 +239,8 @@ class NewsMining():
         co_events = [[i.split('@')[0].split(
             '/')[0], i.split('@')[1].split('/')[0]] for i in co_dict]
         events += co_events
-        print(ner_dict.keys())
-        print(events)
+        # print(ner_dict.keys())
+        # print(events)
         result_dict = {}
 
         for item in ner_dict:
@@ -246,15 +248,12 @@ class NewsMining():
             if len(parts) == 2:
                 key, value = parts
                 result_dict[key] = value
-        print(result_dict)
         for t in triples:
             if t[0] in keywords:
                 events.append([t[0], 'related', t[1]])
 
             if t[1] in keywords:
                 events.append([t[1], 'related', t[0]])
-
-        # Add edges between keywords and frequency
         for wd in word_dict:
             if wd[0] in keywords:
                 # print(wd[0])
@@ -264,7 +263,6 @@ class NewsMining():
         data = {'nodes': nodes, 'edges': edge}
         for i in data['edges']:
             if i['label'] in result_dict.keys():
-                print("found ",i['label'])
                 i['ner']=result_dict[i['label']]
             else:
                 i['ner']=None

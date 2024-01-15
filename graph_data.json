@@ -1,61 +1,61 @@
 {
   "nodes": [
     {
-      "from": 170,
+      "from": 144,
       "label": "",
       "to": 19,
       "category": "keyword"
     },
     {
-      "from": 2,
+      "from": 142,
       "label": "",
       "to": 19,
       "category": "keyword"
     },
     {
-      "from": 168,
+      "from": 140,
       "label": "",
       "to": 19,
       "category": "keyword"
     },
     {
-      "from": 6,
+      "from": 138,
       "label": "",
       "to": 19,
       "category": "keyword"
     },
     {
-      "from": 8,
+      "from": 148,
       "label": "",
       "to": 19,
       "category": "keyword"
     },
     {
-      "from": 10,
+      "from": 146,
       "label": "",
       "to": 19,
       "category": "keyword"
     },
     {
-      "from": 12,
+      "from": 136,
       "label": "",
       "to": 19,
       "category": "keyword"
     },
     {
-      "from": 172,
+      "from": 134,
       "label": "",
       "to": 19,
       "category": "keyword"
     },
     {
-      "from": 174,
+      "from": 16,
       "label": "",
       "to": 19,
       "category": "keyword"
     },
     {
-      "from": 18,
+      "from": 132,
       "label": "",
       "to": 19,
       "category": "keyword"
@@ -63,476 +63,398 @@
     {
       "from": 20,
       "label": "",
-      "to": 39,
-      "category": "frequency"
+      "to": 142,
+      "category": "related"
     },
     {
       "from": 22,
       "label": "",
-      "to": 39,
+      "to": 41,
       "category": "frequency"
     },
     {
-      "from": 24,
+      "from": 132,
       "label": "",
-      "to": 39,
+      "to": 41,
       "category": "frequency"
     },
     {
-      "from": 26,
+      "from": 134,
       "label": "",
-      "to": 39,
+      "to": 41,
       "category": "frequency"
     },
     {
-      "from": 168,
+      "from": 136,
       "label": "",
-      "to": 39,
+      "to": 41,
       "category": "frequency"
     },
     {
-      "from": 30,
+      "from": 138,
       "label": "",
-      "to": 39,
+      "to": 41,
       "category": "frequency"
     },
     {
-      "from": 170,
+      "from": 140,
       "label": "",
-      "to": 39,
+      "to": 41,
       "category": "frequency"
     },
     {
-      "from": 172,
+      "from": 142,
       "label": "",
-      "to": 39,
+      "to": 41,
       "category": "frequency"
     },
     {
-      "from": 174,
+      "from": 144,
       "label": "",
-      "to": 39,
+      "to": 41,
       "category": "frequency"
     },
     {
-      "from": 38,
+      "from": 146,
       "label": "",
-      "to": 39,
+      "to": 41,
       "category": "frequency"
     },
     {
-      "from": 155,
+      "from": 148,
+      "label": "",
+      "to": 41,
+      "category": "frequency"
+    },
+    {
+      "from": 128,
+      "label": "",
+      "to": 57,
+      "category": "related"
+    },
+    {
+      "from": 115,
+      "label": "",
+      "to": 57,
+      "category": "related"
+    },
+    {
+      "from": 113,
       "label": "",
       "to": 55,
       "category": "related"
     },
     {
-      "from": 161,
-      "label": "",
-      "to": 53,
-      "category": "related"
-    },
-    {
-      "from": 163,
-      "label": "",
-      "to": 53,
-      "category": "related"
-    },
-    {
-      "from": 159,
-      "label": "",
-      "to": 51,
-      "category": "related"
-    },
-    {
-      "from": 157,
+      "from": 117,
       "label": "",
       "to": 55,
       "category": "related"
     },
     {
-      "from": 165,
-      "label": "",
-      "to": 51,
-      "category": "related"
-    },
-    {
-      "from": 167,
+      "from": 111,
       "label": "",
       "to": 53,
       "category": "related"
     },
     {
-      "from": 166,
+      "from": 116,
+      "label": "",
+      "to": 53,
+      "category": "related"
+    },
+    {
+      "from": 136,
       "label": "",
       "to": 55,
       "category": "related"
     },
     {
-      "from": 155,
+      "from": 129,
       "label": "",
-      "to": 157,
+      "to": 57,
       "category": "related"
     },
     {
-      "from": 155,
+      "from": 128,
       "label": "",
-      "to": 159,
+      "to": 111,
       "category": "related"
     },
     {
-      "from": 155,
+      "from": 128,
       "label": "",
-      "to": 161,
+      "to": 113,
       "category": "related"
     },
     {
-      "from": 155,
+      "from": 128,
       "label": "",
-      "to": 163,
+      "to": 115,
       "category": "related"
     },
     {
-      "from": 155,
+      "from": 128,
       "label": "",
-      "to": 165,
+      "to": 117,
       "category": "related"
     },
     {
-      "from": 155,
+      "from": 128,
       "label": "",
-      "to": 167,
+      "to": 116,
       "category": "related"
     },
     {
-      "from": 155,
+      "from": 111,
       "label": "",
-      "to": 166,
+      "to": 128,
       "category": "related"
     },
     {
-      "from": 157,
+      "from": 111,
       "label": "",
-      "to": 155,
+      "to": 113,
       "category": "related"
     },
     {
-      "from": 157,
+      "from": 111,
       "label": "",
-      "to": 159,
+      "to": 115,
       "category": "related"
     },
     {
-      "from": 157,
+      "from": 111,
       "label": "",
-      "to": 161,
+      "to": 117,
       "category": "related"
     },
     {
-      "from": 157,
+      "from": 111,
       "label": "",
-      "to": 163,
+      "to": 116,
       "category": "related"
     },
     {
-      "from": 157,
+      "from": 113,
       "label": "",
-      "to": 165,
+      "to": 128,
       "category": "related"
     },
     {
-      "from": 157,
+      "from": 113,
       "label": "",
-      "to": 167,
+      "to": 111,
       "category": "related"
     },
     {
-      "from": 157,
+      "from": 113,
       "label": "",
-      "to": 166,
+      "to": 115,
       "category": "related"
     },
     {
-      "from": 159,
+      "from": 113,
       "label": "",
-      "to": 155,
+      "to": 117,
       "category": "related"
     },
     {
-      "from": 159,
+      "from": 113,
       "label": "",
-      "to": 157,
+      "to": 116,
       "category": "related"
     },
     {
-      "from": 159,
+      "from": 115,
       "label": "",
-      "to": 161,
+      "to": 128,
       "category": "related"
     },
     {
-      "from": 159,
+      "from": 115,
       "label": "",
-      "to": 163,
+      "to": 111,
       "category": "related"
     },
     {
-      "from": 159,
+      "from": 115,
       "label": "",
-      "to": 165,
+      "to": 113,
       "category": "related"
     },
     {
-      "from": 159,
+      "from": 115,
       "label": "",
-      "to": 167,
+      "to": 117,
       "category": "related"
     },
     {
-      "from": 159,
+      "from": 115,
       "label": "",
-      "to": 166,
+      "to": 116,
       "category": "related"
     },
     {
-      "from": 161,
+      "from": 117,
       "label": "",
-      "to": 155,
+      "to": 128,
       "category": "related"
     },
     {
-      "from": 161,
+      "from": 117,
       "label": "",
-      "to": 157,
+      "to": 111,
       "category": "related"
     },
     {
-      "from": 161,
+      "from": 117,
       "label": "",
-      "to": 159,
+      "to": 113,
       "category": "related"
     },
     {
-      "from": 161,
+      "from": 117,
       "label": "",
-      "to": 163,
+      "to": 115,
       "category": "related"
     },
     {
-      "from": 161,
+      "from": 117,
       "label": "",
-      "to": 165,
+      "to": 116,
       "category": "related"
     },
     {
-      "from": 161,
+      "from": 116,
       "label": "",
-      "to": 167,
+      "to": 128,
       "category": "related"
     },
     {
-      "from": 161,
+      "from": 116,
       "label": "",
-      "to": 166,
+      "to": 111,
       "category": "related"
     },
     {
-      "from": 163,
+      "from": 116,
       "label": "",
-      "to": 155,
+      "to": 113,
       "category": "related"
     },
     {
-      "from": 163,
+      "from": 116,
       "label": "",
-      "to": 157,
+      "to": 115,
       "category": "related"
     },
     {
-      "from": 163,
+      "from": 116,
       "label": "",
-      "to": 159,
+      "to": 117,
       "category": "related"
     },
     {
-      "from": 163,
+      "from": 136,
       "label": "",
-      "to": 161,
+      "to": 129,
       "category": "related"
     },
     {
-      "from": 163,
+      "from": 136,
       "label": "",
-      "to": 165,
+      "to": 128,
       "category": "related"
     },
     {
-      "from": 163,
+      "from": 129,
       "label": "",
-      "to": 167,
+      "to": 136,
       "category": "related"
     },
     {
-      "from": 163,
+      "from": 129,
       "label": "",
-      "to": 166,
+      "to": 128,
       "category": "related"
     },
     {
-      "from": 165,
+      "from": 128,
       "label": "",
-      "to": 155,
+      "to": 136,
       "category": "related"
     },
     {
-      "from": 165,
+      "from": 128,
       "label": "",
-      "to": 157,
+      "to": 129,
       "category": "related"
     },
     {
-      "from": 165,
+      "from": 142,
       "label": "",
-      "to": 159,
+      "to": 149,
       "category": "related"
     },
     {
-      "from": 165,
+      "from": 132,
       "label": "",
-      "to": 161,
-      "category": "related"
-    },
-    {
-      "from": 165,
-      "label": "",
-      "to": 163,
-      "category": "related"
-    },
-    {
-      "from": 165,
-      "label": "",
-      "to": 167,
-      "category": "related"
-    },
-    {
-      "from": 165,
-      "label": "",
-      "to": 166,
-      "category": "related"
-    },
-    {
-      "from": 167,
-      "label": "",
-      "to": 155,
-      "category": "related"
-    },
-    {
-      "from": 167,
-      "label": "",
-      "to": 157,
-      "category": "related"
-    },
-    {
-      "from": 167,
-      "label": "",
-      "to": 159,
-      "category": "related"
-    },
-    {
-      "from": 167,
-      "label": "",
-      "to": 161,
-      "category": "related"
-    },
-    {
-      "from": 167,
-      "label": "",
-      "to": 163,
-      "category": "related"
-    },
-    {
-      "from": 167,
-      "label": "",
-      "to": 165,
-      "category": "related"
-    },
-    {
-      "from": 167,
-      "label": "",
-      "to": 166,
-      "category": "related"
-    },
-    {
-      "from": 166,
-      "label": "",
-      "to": 155,
-      "category": "related"
-    },
-    {
-      "from": 166,
-      "label": "",
-      "to": 157,
-      "category": "related"
-    },
-    {
-      "from": 166,
-      "label": "",
-      "to": 159,
-      "category": "related"
-    },
-    {
-      "from": 166,
-      "label": "",
-      "to": 161,
-      "category": "related"
-    },
-    {
-      "from": 166,
-      "label": "",
-      "to": 163,
-      "category": "related"
-    },
-    {
-      "from": 166,
-      "label": "",
-      "to": 165,
-      "category": "related"
-    },
-    {
-      "from": 166,
-      "label": "",
-      "to": 167,
-      "category": "related"
-    },
-    {
-      "from": 168,
-      "label": "",
-      "to": 175,
+      "to": 149,
       "category": "frequency"
     },
     {
-      "from": 170,
+      "from": 134,
       "label": "",
-      "to": 175,
+      "to": 149,
       "category": "frequency"
     },
     {
-      "from": 172,
+      "from": 136,
       "label": "",
-      "to": 175,
+      "to": 149,
       "category": "frequency"
     },
     {
-      "from": 174,
+      "from": 138,
       "label": "",
-      "to": 175,
+      "to": 149,
+      "category": "frequency"
+    },
+    {
+      "from": 140,
+      "label": "",
+      "to": 149,
+      "category": "frequency"
+    },
+    {
+      "from": 142,
+      "label": "",
+      "to": 149,
+      "category": "frequency"
+    },
+    {
+      "from": 144,
+      "label": "",
+      "to": 149,
+      "category": "frequency"
+    },
+    {
+      "from": 146,
+      "label": "",
+      "to": 149,
+      "category": "frequency"
+    },
+    {
+      "from": 148,
+      "label": "",
+      "to": 149,
       "category": "frequency"
     }
   ],
   "edges": [
     {
-      "id": 170,
-      "label": "United",
+      "id": 144,
+      "label": "Elon",
       "category": "other",
       "ner": null,
       "value": 0
@@ -545,196 +467,161 @@
       "value": 0
     },
     {
-      "id": 2,
-      "label": "Musk",
+      "id": 142,
+      "label": "headed",
       "category": "other",
       "ner": null,
       "value": 0
     },
     {
-      "id": 168,
-      "label": "Corporation",
+      "id": 140,
+      "label": "Merkel",
       "category": "other",
       "ner": null,
       "value": 0
     },
     {
-      "id": 6,
-      "label": "York",
+      "id": 138,
+      "label": "Angela",
       "category": "other",
       "ner": null,
       "value": 0
     },
     {
-      "id": 8,
-      "label": "City",
-      "category": "other",
-      "ner": null,
-      "value": 0
-    },
-    {
-      "id": 10,
-      "label": "partnership",
-      "category": "other",
-      "ner": null,
-      "value": 0
-    },
-    {
-      "id": 12,
-      "label": "New",
-      "category": "other",
-      "ner": null,
-      "value": 0
-    },
-    {
-      "id": 172,
-      "label": "Nations",
-      "category": "other",
-      "ner": null,
-      "value": 0
-    },
-    {
-      "id": 174,
-      "label": "General",
-      "category": "other",
-      "ner": null,
-      "value": 0
-    },
-    {
-      "id": 18,
+      "id": 148,
       "label": "develop",
       "category": "other",
       "ner": null,
       "value": 0
     },
     {
-      "id": 20,
-      "label": "John",
+      "id": 146,
+      "label": "Musk",
       "category": "other",
       "ner": null,
       "value": 0
     },
     {
-      "id": 39,
-      "label": "frequency",
-      "category": "frequency",
-      "ner": null,
-      "value": 0
-    },
-    {
-      "id": 22,
-      "label": "Smith",
-      "category": "other",
-      "ner": null,
-      "value": 0
-    },
-    {
-      "id": 24,
-      "label": "CEO",
-      "category": "other",
-      "ner": null,
-      "value": 0
-    },
-    {
-      "id": 26,
-      "label": "XYZ",
-      "category": "other",
-      "ner": null,
-      "value": 0
-    },
-    {
-      "id": 30,
-      "label": "attended",
-      "category": "other",
-      "ner": null,
-      "value": 0
-    },
-    {
-      "id": 38,
-      "label": "Assembly",
-      "category": "other",
-      "ner": null,
-      "value": 0
-    },
-    {
-      "id": 155,
-      "label": "John Smith",
-      "category": "other",
-      "ner": "PERSON",
-      "value": "PERSON"
-    },
-    {
-      "id": 55,
-      "label": "Person",
-      "category": "other",
-      "ner": null,
-      "value": 0
-    },
-    {
-      "id": 161,
-      "label": "XYZ Corporation",
-      "category": "other",
-      "ner": "ORG",
-      "value": "ORG"
-    },
-    {
-      "id": 53,
-      "label": "Organization",
-      "category": "Organization",
-      "ner": null,
-      "value": 0
-    },
-    {
-      "id": 163,
-      "label": "the United Nations General Assembly",
-      "category": "other",
-      "ner": "ORG",
-      "value": "ORG"
-    },
-    {
-      "id": 159,
-      "label": "New York City",
-      "category": "other",
-      "ner": "GPE",
-      "value": "GPE"
-    },
-    {
-      "id": 51,
-      "label": "Location",
-      "category": "Location",
-      "ner": null,
-      "value": 0
-    },
-    {
-      "id": 157,
-      "label": "Angela Merkel",
-      "category": "other",
-      "ner": "PERSON",
-      "value": "PERSON"
-    },
-    {
-      "id": 165,
-      "label": "Germany",
-      "category": "other",
-      "ner": "GPE",
-      "value": "GPE"
-    },
-    {
-      "id": 167,
+      "id": 136,
       "label": "SpaceX",
       "category": "other",
       "ner": "ORG",
       "value": "ORG"
     },
     {
-      "id": 166,
+      "id": 134,
+      "label": "partnership",
+      "category": "other",
+      "ner": null,
+      "value": 0
+    },
+    {
+      "id": 16,
+      "label": "energy",
+      "category": "other",
+      "ner": null,
+      "value": 0
+    },
+    {
+      "id": 132,
+      "label": "company",
+      "category": "other",
+      "ner": null,
+      "value": 0
+    },
+    {
+      "id": 20,
+      "label": "by",
+      "category": "other",
+      "ner": null,
+      "value": 0
+    },
+    {
+      "id": 22,
+      "label": "highlighted",
+      "category": "other",
+      "ner": null,
+      "value": 0
+    },
+    {
+      "id": 41,
+      "label": "frequency",
+      "category": "frequency",
+      "ner": null,
+      "value": 0
+    },
+    {
+      "id": 128,
+      "label": "Angela Merkel",
+      "category": "other",
+      "ner": "PERSON",
+      "value": "PERSON"
+    },
+    {
+      "id": 57,
+      "label": "Person",
+      "category": "other",
+      "ner": null,
+      "value": 0
+    },
+    {
+      "id": 115,
+      "label": "John Smith",
+      "category": "other",
+      "ner": "PERSON",
+      "value": "PERSON"
+    },
+    {
+      "id": 113,
+      "label": "XYZ Corporation",
+      "category": "other",
+      "ner": "ORG",
+      "value": "ORG"
+    },
+    {
+      "id": 55,
+      "label": "Organization",
+      "category": "Organization",
+      "ner": null,
+      "value": 0
+    },
+    {
+      "id": 117,
+      "label": "the United Nations General Assembly",
+      "category": "other",
+      "ner": "ORG",
+      "value": "ORG"
+    },
+    {
+      "id": 111,
+      "label": "New York City",
+      "category": "other",
+      "ner": "GPE",
+      "value": "GPE"
+    },
+    {
+      "id": 53,
+      "label": "Location",
+      "category": "Location",
+      "ner": null,
+      "value": 0
+    },
+    {
+      "id": 116,
+      "label": "Germany",
+      "category": "other",
+      "ner": "GPE",
+      "value": "GPE"
+    },
+    {
+      "id": 129,
       "label": "Elon Musk",
       "category": "other",
       "ner": "PERSON",
       "value": "PERSON"
     },
     {
-      "id": 175,
+      "id": 149,
       "label": "related",
       "category": "related",
       "ner": null,

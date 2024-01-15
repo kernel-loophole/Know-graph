@@ -65,7 +65,7 @@ class TextrankGraph:
 
         for n, w in nodeweight_dict.items():
             nodeweight_dict[n] = (w - min_rank/10.0) / (max_rank - min_rank/10.0)
-        print(nodeweight_dict)
+        # print(nodeweight_dict)
         # print(weight_updates_df)
         return nodeweight_dict
 
@@ -77,7 +77,7 @@ class TextRank:
     def __init__(self):
         self.candi_pos = ['NOUN', 'PROPN', 'VERB'] 
         self.stop_pos = ['NUM', 'ADV'] 
-        self.span = 8
+        self.span = 10
 
     def extract_keywords(self, word_list, num_keywords):
         print(word_list,num_keywords)
@@ -93,10 +93,10 @@ class TextRank:
                         break
                     if word_list[j][1] not in self.candi_pos or word_list[j][1] in self.stop_pos or len(word_list[j][0]) < 2:
                         continue
-                    print(word[0],word_list[j][0])
+                    # print(word[0],word_list[j][0])
                     pair = tuple((word[0], word_list[j][0]))
                     cm[(pair)] +=  1
-                    # print(pair)
+                
 
         # cm = {('was', 'prison'): 1, ('become', 'prison'): 1}
         
@@ -104,10 +104,11 @@ class TextRank:
         # print(word_list)
         print(cm)
         for terms, w in cm.items():
-            print(terms[0],terms[1],w)
+            # print(terms[0],terms[1],w)
             g.addEdge(terms[0], terms[1], w)
         nodes_rank = g.rank()
         nodes_rank = sorted(nodes_rank.items(), key=lambda asd:asd[1], reverse=True)
         # print(nodes_rank)
+        print(nodes_rank[:num_keywords])
         return nodes_rank[:num_keywords]
 
