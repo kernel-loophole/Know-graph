@@ -138,10 +138,26 @@ test_str_1="Pakistan was founded by Quaid-e-Azam Muhammad Ali Jinnah in 1947."
 test_string_one="Quaid-e-Azam Muhammad Ali Jinnah was good man"
 # test_fail="The bank is on the river, and the bank approved my loan application."
 ten_ner="In 2022, John Smith, the CEO of XYZ Corporation, attended the United Nations General Assembly in New York City, where he discussed climate change with Angela Merkel, the Chancellor of Germany.He highlighted the company's partnership with SpaceX to Angela Merkel, headed by Elon Musk, to develop innovative sustainable energy solutions for the future."
+def merge_text_from_files(file_paths):
+    merged_text = ""
+
+    for file_path in file_paths:
+        try:
+            with open(file_path, "r") as file:
+                # Read the content of the file and append it to the merged_text
+                merged_text += file.read()
+        except FileNotFoundError:
+            print(f"File not found: {file_path}")
+        except Exception as e:
+            print(f"Error reading file {file_path}: {e}")
+
+    return merged_text
+
+file_paths = ["/home/haider/Desktop/Know-graph/output.txt"]
+result = merge_text_from_files(file_paths)
+print(result)
 Miner = NewsMining()
-# with open("data.txt",'r') as file:
-#     content=file.read()
-Miner.main(ten_ner)
+Miner.main(result)
 # Miner.main(test_str_1)
 # Miner.main(content4)
 # Miner.main(content3)

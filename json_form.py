@@ -16,7 +16,10 @@ def format_json_file(file_path):
 
 file_path = 'graph_data.json'  
 formatted_data = format_json_file(file_path)
-
+def read_json_file(filename):
+    with open(filename, 'r') as file:
+        data = json.load(file)
+    return data
 # if formatted_data:
 #     print(formatted_data)
 #     print(f"Formatted JSON data has been written to: {file_path}")

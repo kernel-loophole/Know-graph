@@ -275,8 +275,10 @@ class NewsMining():
             edges['distance'] = 0
         # print(edge)
         data={'nodes':nodes,"edges":edge}
+        
         with open("query_graph.json",'w') as file:
             json.dump(data,file)            
         format_json_file('graph_data.json')
         format_json_file('query_graph.json')
+        return data
        
