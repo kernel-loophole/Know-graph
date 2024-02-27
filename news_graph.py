@@ -6,7 +6,7 @@ from BFS import read_json_file
 from graph_show import GraphShow
 from textrank import TextRank
 from json_form import format_json_file
-from BFS import GraphProcessor
+from BFS import GraphProcessor,read_json_file
 
 nlp = spacy.load('en_core_web_lg')
 
@@ -256,9 +256,10 @@ class NewsMining():
                 events.append([t[1], 'related', t[0]])
         for wd in word_dict:
             if wd[0] in keywords:
-                # print(wd[0])
                 events.append([wd[0], 'related', 'frequency'])  
-        self.graph_shower.create_page(events,result_dict)
+        re_data=read_json_file('update_json.json')
+        print(re_data)
+        self.graph_shower.create_page(re_data,result_dict)
         nodes,edge=self.graph_shower.return_edge(events,result_dict)
         data = {'nodes': nodes, 'edges': edge}
         for i in data['edges']:
@@ -277,8 +278,10 @@ class NewsMining():
         data={'nodes':nodes,"edges":edge}
         
         with open("query_graph.json",'w') as file:
-            json.dump(data,file)            
+            json.dump(data,file)     
+
         format_json_file('graph_data.json')
         format_json_file('query_graph.json')
+        
         return data
        

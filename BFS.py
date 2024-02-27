@@ -50,6 +50,7 @@ class GraphProcessor:
 
         with open('query_graph.json', 'w') as json_file:
             json.dump(re, json_file, indent=2)
+        
         result_one = {}
         re=read_json_file("query_graph.json")
 
@@ -89,11 +90,31 @@ def find_matching_id(json_data,keyw):
         # print(i['label'])
         if i['label']==keyw:
             return i['id']
+from json_form import format_json_file
 if __name__=="__main__":
     processor = GraphProcessor('graph_data.json')
     re=read_json_file("graph_data.json")
     ids=processor.bfs_related_nodes(find_matching_id(re,'XYZ Corporation')) 
-    print(ids)
+    # print(ids)
+    test_json=read_json_file('update_json.json')
+    nodes_data=test_json['edges']
+    egdes_dat=test_json['nodes']
+    test_nodes_data=[]
+    # print(nodes_data)
+    for i in nodes_data:
+        if i['label'] in ids:
+            print("found")
+            print(i['label'])
+            test_nodes_data.append(i)
+    data={'nodes':test_nodes_data,"edges":nodes_data}
+    # print(data)
+    with open("test_json.json",'w') as file:
+            json.dump(data,file)
+            
+    format_json_file('test_json.json')
+
+            
+            
     # cal=find_matching_id(re,"AI")
     # distance={}
     # for i in ids:

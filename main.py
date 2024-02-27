@@ -153,11 +153,20 @@ def merge_text_from_files(file_paths):
 
     return merged_text
 
-file_paths = ["/home/haider/Desktop/Know-graph/output.txt"]
-result = merge_text_from_files(file_paths)
-print(result)
+# file_paths = ["/home/haider/Desktop/Know-graph/output.txt"]
+# result = merge_text_from_files(file_paths)
+# print(result)
+# from merge_json import json_union
+# import json
 Miner = NewsMining()
-Miner.main(result)
-# Miner.main(test_str_1)
-# Miner.main(content4)
-# Miner.main(content3)
+data_set_one=Miner.main(ten_ner)
+# data_set_two=Miner.main(ten_ner)
+print(data_set_one)
+# print("+++++++++++++++++data point two +++++++++++++")
+# print(data_set_two)
+# union_data = json_union(data_set_one, data_set_two)
+# with open("query_graph.json",'w') as file:
+#     json.dump(union_data,file)  
+# from json_form import format_json_file
+# format_json_file('query_graph.json')
+        

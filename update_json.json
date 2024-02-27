@@ -1,0 +1,731 @@
+{
+    "nodes": [
+      {
+        "from": 144,
+        "label": "",
+        "to": 19,
+        "category": "keyword",
+        "distance": 0
+      },
+      {
+        "from": 142,
+        "label": "",
+        "to": 19,
+        "category": "keyword",
+        "distance": 0
+      },
+      {
+        "from": 140,
+        "label": "",
+        "to": 19,
+        "category": "keyword",
+        "distance": 0
+      },
+      {
+        "from": 138,
+        "label": "",
+        "to": 19,
+        "category": "keyword",
+        "distance": 0
+      },
+      {
+        "from": 148,
+        "label": "",
+        "to": 19,
+        "category": "keyword",
+        "distance": 0
+      },
+      {
+        "from": 146,
+        "label": "",
+        "to": 19,
+        "category": "keyword",
+        "distance": 0
+      },
+      {
+        "from": 136,
+        "label": "",
+        "to": 19,
+        "category": "keyword",
+        "distance": 0
+      },
+      {
+        "from": 134,
+        "label": "",
+        "to": 19,
+        "category": "keyword",
+        "distance": 0
+      },
+      {
+        "from": 16,
+        "label": "",
+        "to": 19,
+        "category": "keyword",
+        "distance": 0
+      },
+      {
+        "from": 132,
+        "label": "",
+        "to": 19,
+        "category": "keyword",
+        "distance": 0
+      },
+      {
+        "from": 20,
+        "label": "",
+        "to": 142,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 22,
+        "label": "",
+        "to": 41,
+        "category": "frequency",
+        "distance": 0
+      },
+      {
+        "from": 132,
+        "label": "",
+        "to": 41,
+        "category": "frequency",
+        "distance": 0
+      },
+      {
+        "from": 134,
+        "label": "",
+        "to": 41,
+        "category": "frequency",
+        "distance": 0
+      },
+      {
+        "from": 136,
+        "label": "",
+        "to": 41,
+        "category": "frequency",
+        "distance": 0
+      },
+      {
+        "from": 138,
+        "label": "",
+        "to": 41,
+        "category": "frequency",
+        "distance": 0
+      },
+      {
+        "from": 140,
+        "label": "",
+        "to": 41,
+        "category": "frequency",
+        "distance": 0
+      },
+      {
+        "from": 142,
+        "label": "",
+        "to": 41,
+        "category": "frequency",
+        "distance": 0
+      },
+      {
+        "from": 144,
+        "label": "",
+        "to": 41,
+        "category": "frequency",
+        "distance": 0
+      },
+      {
+        "from": 146,
+        "label": "",
+        "to": 41,
+        "category": "frequency",
+        "distance": 0
+      },
+      {
+        "from": 148,
+        "label": "",
+        "to": 41,
+        "category": "frequency",
+        "distance": 0
+      },
+      {
+        "from": 127,
+        "label": "",
+        "to": 57,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 115,
+        "label": "",
+        "to": 57,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 117,
+        "label": "",
+        "to": 55,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 116,
+        "label": "",
+        "to": 55,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 113,
+        "label": "",
+        "to": 53,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 111,
+        "label": "",
+        "to": 53,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 136,
+        "label": "",
+        "to": 55,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 129,
+        "label": "",
+        "to": 57,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 127,
+        "label": "",
+        "to": 111,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 127,
+        "label": "",
+        "to": 113,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 127,
+        "label": "",
+        "to": 115,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 127,
+        "label": "",
+        "to": 117,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 127,
+        "label": "",
+        "to": 116,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 111,
+        "label": "",
+        "to": 127,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 111,
+        "label": "",
+        "to": 113,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 111,
+        "label": "",
+        "to": 115,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 111,
+        "label": "",
+        "to": 117,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 111,
+        "label": "",
+        "to": 116,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 113,
+        "label": "",
+        "to": 127,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 113,
+        "label": "",
+        "to": 111,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 113,
+        "label": "",
+        "to": 115,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 113,
+        "label": "",
+        "to": 117,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 113,
+        "label": "",
+        "to": 116,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 115,
+        "label": "",
+        "to": 127,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 115,
+        "label": "",
+        "to": 111,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 115,
+        "label": "",
+        "to": 113,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 115,
+        "label": "",
+        "to": 117,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 115,
+        "label": "",
+        "to": 116,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 117,
+        "label": "",
+        "to": 127,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 117,
+        "label": "",
+        "to": 111,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 117,
+        "label": "",
+        "to": 113,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 117,
+        "label": "",
+        "to": 115,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 117,
+        "label": "",
+        "to": 116,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 116,
+        "label": "",
+        "to": 127,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 116,
+        "label": "",
+        "to": 111,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 116,
+        "label": "",
+        "to": 113,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 116,
+        "label": "",
+        "to": 115,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 116,
+        "label": "",
+        "to": 117,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 127,
+        "label": "",
+        "to": 129,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 127,
+        "label": "",
+        "to": 136,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 129,
+        "label": "",
+        "to": 127,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 129,
+        "label": "",
+        "to": 136,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 136,
+        "label": "",
+        "to": 127,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 136,
+        "label": "",
+        "to": 129,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 142,
+        "label": "",
+        "to": 149,
+        "category": "related",
+        "distance": 0
+      },
+      {
+        "from": 132,
+        "label": "",
+        "to": 149,
+        "category": "frequency",
+        "distance": 0
+      },
+      {
+        "from": 134,
+        "label": "",
+        "to": 149,
+        "category": "frequency",
+        "distance": 0
+      },
+      {
+        "from": 136,
+        "label": "",
+        "to": 149,
+        "category": "frequency",
+        "distance": 0
+      },
+      {
+        "from": 138,
+        "label": "",
+        "to": 149,
+        "category": "frequency",
+        "distance": 0
+      },
+      {
+        "from": 140,
+        "label": "",
+        "to": 149,
+        "category": "frequency",
+        "distance": 0
+      },
+      {
+        "from": 142,
+        "label": "",
+        "to": 149,
+        "category": "frequency",
+        "distance": 0
+      },
+      {
+        "from": 144,
+        "label": "",
+        "to": 149,
+        "category": "frequency",
+        "distance": 0
+      },
+      {
+        "from": 146,
+        "label": "",
+        "to": 149,
+        "category": "frequency",
+        "distance": 0
+      },
+      {
+        "from": 148,
+        "label": "",
+        "to": 149,
+        "category": "frequency",
+        "distance": 0
+      }
+    ],
+    "edges": [
+      {
+        "id": 144,
+        "label": "Elon",
+        "category": "other",
+        "ner": null,
+        "value": 0,
+        "distance": 0
+      },
+      {
+        "id": 19,
+        "label": "keyword",
+        "category": "keyword",
+        "ner": null,
+        "value": 0,
+        "distance": 0
+      },
+      {
+        "id": 142,
+        "label": "headed",
+        "category": "other",
+        "ner": null,
+        "value": 0,
+        "distance": 0
+      },
+      {
+        "id": 140,
+        "label": "Merkel",
+        "category": "other",
+        "ner": null,
+        "value": 0,
+        "distance": 0
+      },
+      {
+        "id": 138,
+        "label": "Angela",
+        "category": "other",
+        "ner": null,
+        "value": 0,
+        "distance": 0
+      },
+      {
+        "id": 148,
+        "label": "develop",
+        "category": "other",
+        "ner": null,
+        "value": 0,
+        "distance": 0
+      },
+      {
+        "id": 146,
+        "label": "Musk",
+        "category": "other",
+        "ner": null,
+        "value": 0,
+        "distance": 0
+      },
+      {
+        "id": 136,
+        "label": "SpaceX",
+        "category": "other",
+        "ner": "ORG",
+        "value": "ORG",
+        "distance": 0
+      },
+      {
+        "id": 134,
+        "label": "partnership",
+        "category": "other",
+        "ner": null,
+        "value": 0,
+        "distance": 0
+      },
+      {
+        "id": 16,
+        "label": "energy",
+        "category": "other",
+        "ner": null,
+        "value": 0,
+        "distance": 0
+      },
+      {
+        "id": 132,
+        "label": "company",
+        "category": "other",
+        "ner": null,
+        "value": 0,
+        "distance": 0
+      },
+      {
+        "id": 20,
+        "label": "by",
+        "category": "other",
+        "ner": null,
+        "value": 0,
+        "distance": 0
+      },
+      {
+        "id": 22,
+        "label": "highlighted",
+        "category": "other",
+        "ner": null,
+        "value": 0,
+        "distance": 0
+      },
+      {
+        "id": 41,
+        "label": "frequency",
+        "category": "frequency",
+        "ner": null,
+        "value": 0,
+        "distance": 0
+      },
+      {
+        "id": 127,
+        "label": "Angela Merkel",
+        "category": "other",
+        "ner": "PERSON",
+        "value": "PERSON",
+        "distance": 0
+      },
+      {
+        "id": 57,
+        "label": "Person",
+        "category": "other",
+        "ner": null,
+        "value": 0,
+        "distance": 0
+      },
+      {
+        "id": 115,
+        "label": "John Smith",
+        "category": "other",
+        "ner": "PERSON",
+        "value": "PERSON",
+        "distance": 0
+      },
+      {
+        "id": 117,
+        "label": "XYZ Corporation",
+        "category": "other",
+        "ner": "ORG",
+        "value": "ORG",
+        "distance": 0
+      },
+      {
+        "id": 55,
+        "label": "Organization",
+        "category": "Organization",
+        "ner": null,
+        "value": 0,
+        "distance": 0
+      },
+      {
+        "id": 116,
+        "label": "the United Nations General Assembly",
+        "category": "other",
+        "ner": "ORG",
+        "value": "ORG",
+        "distance": 0
+      },
+      {
+        "id": 113,
+        "label": "New York City",
+        "category": "other",
+        "ner": "GPE",
+        "value": "GPE",
+        "distance": 0
+      },
+      {
+        "id": 53,
+        "label": "Location",
+        "category": "Location",
+        "ner": null,
+        "value": 0,
+        "distance": 0
+      },
+      {
+        "id": 111,
+        "label": "Germany",
+        "category": "other",
+        "ner": "GPE",
+        "value": "GPE",
+        "distance": 0
+      },
+      {
+        "id": 129,
+        "label": "Elon Musk",
+        "category": "other",
+        "ner": "PERSON",
+        "value": "PERSON",
+        "distance": 0
+      },
+      {
+        "id": 149,
+        "label": "related",
+        "category": "related",
+        "ner": null,
+        "value": 0,
+        "distance": 0
+      }
+    ]
+  }
